@@ -1,4 +1,6 @@
-#pragma once
+#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
+#define MESHIS_COMMON_MESH_REPRESENTATION_H_
+
 /**
  * @file Common mesh representation class.
  * Used for interfacing different components of code and passing informations about meshes.
@@ -31,16 +33,18 @@ namespace Common
     class CommonMeshRepresentation
     {
         public:
-        // Since all fields are well-defined,
-        // all constructors and
+        // Since all fields are well-defined (no pointers, no strange classes),
+        // all default constructors etc. will be ok.
 
         vector<Vertex>      vertices;
         vector<Element>     elements;
-
     };
 
-    typedef CommonMeshRepresentation CMR; //< just for convenience to void typing this long name
+    typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
 
 } //! end of namespace Common
 } //! end of namespace Model
 } //! end of namespace MeshIS
+
+
+#endif /* end of include guard: MESHIS_COMMON_MESH_REPRESENTATION_H_ */
