@@ -16,7 +16,7 @@ namespace Export
   /// Abstract class for all importing classes.
   class MeshExporter {
     public:
-      void   Export(const string& absolute_file_path, const CMR& mesh_data) = 0;
+      virtual void   Export(const string& absolute_file_path, const CMR& mesh_data) = 0;
   };
 
 
