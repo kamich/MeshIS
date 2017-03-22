@@ -15,20 +15,25 @@ namespace Model
 {
 namespace IO
 {
-	namespace fs = boost::filesystem;
+	using std::vector;
+	using std::array;
+	using std::string;
+	using std::ifstream;
+	using std::stringstream;
+	using boost::filesystem::path;
 
 	class FileManager
 	{
-		std::vector<std::string> valid_extensions;
+		vector<string> valid_extensions;
 
 	public:
-		bool file_exists(fs::path & file_path);
-		bool extension_checker(const std::string & extension);
-		std::ifstream open_file(fs::path & file_path);
+		bool file_exists(path & file_path);
+		bool extension_checker(const string & extension);
+		ifstream open_file(path & file_path);
 
-		static std::stringstream map_file_to_stringstream(std::ifstream & input_file);
+		static stringstream map_file_to_stringstream(ifstream & input_file);
 
-		FileManager(std::vector<std::string> extensions_base);
+		FileManager(vector<string> extensions_base);
 	};
 
 } //! end of namespace IO
