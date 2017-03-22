@@ -1,8 +1,6 @@
 #include "FileManager.h"
 
 namespace IO = MeshIS::Model::IO;
-using std::stringstream;
-using std::ifstream;
 
 bool IO::FileManager::file_exists(path & file_path)
 {
@@ -20,7 +18,8 @@ bool IO::FileManager::extension_checker(const string & extension)
 ifstream IO::FileManager::open_file(path & file_path)
 {
 	if (!file_exists(file_path)) {
-		throw 1;	//TODO throw valid IO exception
+		
+		throw 1;	
 	}
 	if (!extension_checker(file_path.extension().string())) {
 		throw 2;	//TODO the same

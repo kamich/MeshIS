@@ -8,6 +8,14 @@
 #include <string>
 #include <algorithm>
 #include <boost/filesystem.hpp>
+//#include "IO_Exceptions.h"
+
+using std::vector;
+using std::array;
+using std::string;
+using std::ifstream;
+using std::stringstream;
+using boost::filesystem::path;
 
 namespace MeshIS
 {
@@ -15,12 +23,6 @@ namespace Model
 {
 namespace IO
 {
-	using std::vector;
-	using std::array;
-	using std::string;
-	using std::ifstream;
-	using std::stringstream;
-	using boost::filesystem::path;
 
 	class FileManager
 	{
