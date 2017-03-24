@@ -26,7 +26,7 @@ namespace Common
     typedef int             VertexID;
 
     typedef int               ElementID;
-    
+
     // Element is defined as 4 vertices:
     // no need for such simple class either.
     typedef array<VertexID,4> Element_T4;	//< Tetrahedral element with 4 vertices.
@@ -40,7 +40,7 @@ namespace Common
 
         vector<Vertex>      vertices;
         vector<Element_T4>     elementsT4;
-	vector<Element_P4>     elementsP6;
+	vector<Element_P6>     elementsP6;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
