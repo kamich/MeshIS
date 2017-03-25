@@ -9,14 +9,21 @@
 using std::vector;
 using std::function;
 
-class ViewInitializer
+namespace MeshIS
 {
-public:
-	void addFunction(function<void()>);
-	vector<function<void()>> getFunctionsToRender();
+	namespace View
+	{
 
-private:
-	vector<function<void()>> renderFunctions;
-};
+		class ViewInitializer
+		{
+		public:
+			void addFunction(function<void()>);
+			vector<function<void()>> getFunctionsToRender();
 
+		private:
+			vector<function<void()>> renderFunctions;
+		};
+
+	}
+}
 #endif

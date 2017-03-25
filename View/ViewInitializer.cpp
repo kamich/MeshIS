@@ -1,5 +1,7 @@
 #include "ViewInitializer.h"
 
+using namespace MeshIS::View;
+
 vector<function<void()>> ViewInitializer::getFunctionsToRender()
 {
 	return this->renderFunctions;

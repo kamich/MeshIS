@@ -1,6 +1,9 @@
 #include "ViewInitializer.h"
 #include "StatisticsDisplayer.h"
 #include <string>
+
+using namespace MeshIS::View;
+
 vector<function<void()>> renderFunctions;
 
 void cleanWindow()
@@ -60,8 +63,16 @@ int main(int argc, char* argv[])
 		return err;
 	}
 
+	Element_T4 el{ 1.0,2.0,3.0,4.0 };
+	Element_P6 el2{ 1.0,2.0,3.0,4.0,5.0,6.0 };
+	Element_P6 el3{ 1.0,2.0,3.0,4.0,5.0,6.0 };
+
 	CMR mesh;
-	StatisticsDisplayer stats(mesh);
+	mesh.elementsT4.push_back(el);
+	mesh.elementsP6.push_back(el2);
+	mesh.elementsP6.push_back(el3);
+	MeshIS::Model::MeshStatistic meshStats(mesh);
+	StatisticsDisplayer stats(meshStats);
 	ViewInitializer view;
 
 	view.addFunction(std::bind(&StatisticsDisplayer::displayStatistics, stats));
