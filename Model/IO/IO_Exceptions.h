@@ -1,4 +1,5 @@
-#pragma #ifndef MESHIS_IO_EXCEPTIONS_H_
+#pragma 
+#ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 
 #include <stdexcept>
@@ -10,7 +11,6 @@ namespace Model
 {
 namespace IO
 {
-
 
 /// For exceptions involving some file.
 class FileException : public std::runtime_error {

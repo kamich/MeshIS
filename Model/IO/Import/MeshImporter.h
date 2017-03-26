@@ -1,8 +1,9 @@
-#pragma #ifndef MESHIS_MESH_IMPORTER_H_
+#pragma 
+#ifndef MESHIS_MESH_IMPORTER_H_
 #define MESHIS_MESH_IMPORTER_H_
 
 #include <string>
-#include "CommonMeshRepresentation.h"
+#include "../../Common/CommonMeshRepresentation.h"
 
 using std::string;
 
@@ -16,7 +17,7 @@ namespace Import
   /// Abstract class for all importing classes.
   class MeshImporter {
     public:
-      virtual CMR   Import(const string & absolute_file_path) = 0;
+      virtual MeshIS::Model::Common::CMR Import(const string & absolute_file_path) = 0;
   };
 
 
