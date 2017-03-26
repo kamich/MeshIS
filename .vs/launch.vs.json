@@ -1,0 +1,60 @@
+{
+  "version": "0.2.1",
+  "defaults": {},
+  "configurations": [
+    {
+      "type": "default",
+      "project": "ConsoleApplicationForConversion\\CMakeLists.txt",
+      "projectTarget": "Application",
+      "name": "Application",
+      "args": [
+        "TestFormat",
+        "file.test",
+        "TestFormat",
+        "file.test"
+      ]
+    },
+    {
+      "type": "default",
+      "project": "ConsoleApplicationForConversion\\CMakeLists.txt",
+      "projectTarget": "tests\\tests",
+      "name": "tests\\tests with no args"
+    },
+    {
+      "type": "default",
+      "project": "ConsoleApplicationForConversion\\CMakeLists.txt",
+      "projectTarget": "tests\\tests",
+      "name": "tests\\tests with right args",
+      "args": [
+        "TestFormat",
+        "file.test",
+        "TestFormat",
+        "file.test"
+      ]
+    },
+    {
+      "type": "default",
+      "project": "ConsoleApplicationForConversion\\CMakeLists.txt",
+      "projectTarget": "tests\\tests",
+      "name": "tests\\tests with wrong args: format to import",
+      "args": [
+        "WrongFormat",
+        "file.test",
+        "TestFormat",
+        "file.test"
+      ]
+    },
+    {
+      "type": "default",
+      "project": "ConsoleApplicationForConversion\\CMakeLists.txt",
+      "projectTarget": "tests\\tests",
+      "name": "tests\\tests with wrong args: format to export",
+      "args": [
+        "TestFormat",
+        "file.test",
+        "WrongFormat",
+        "file.test"
+      ]
+    }
+  ]
+}
