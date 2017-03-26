@@ -1,1 +1,2 @@
+CMakeLists.txt not found in C:\Users\Kielbasa Karol\Desktop\cpp1
 Cannot load CMake project: Neither MinGW nor Cygwin is selected
