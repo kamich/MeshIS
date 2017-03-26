@@ -16,7 +16,7 @@ namespace Import
   /// Abstract class for all importing classes.
   class MeshImporter {
     public:
-      CMR   Import(const string & absolute_file_path) = 0;
+		virtual CMR (const string & absolute_file_path) = 0;
   };
 
 
