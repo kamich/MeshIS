@@ -1,0 +1,3 @@
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/cmake-build-debug/CMakeFiles/MeshIS.dir
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/cmake-build-debug/CMakeFiles/rebuild_cache.dir

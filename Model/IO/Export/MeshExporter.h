@@ -2,7 +2,7 @@
 #define MESHIS_MESH_EXPORTER_H_
 
 #include <string>
-#include "CommonMeshRepresentation.h"
+#include "../../Common/CommonMeshRepresentation.h"
 
 using std::string;
 
