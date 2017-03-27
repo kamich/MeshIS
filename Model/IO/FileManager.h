@@ -8,7 +8,7 @@
 #include <string>
 #include <algorithm>
 #include <boost/filesystem.hpp>
-//#include "IO_Exceptions.h"
+#include "IO_Exceptions.h"
 
 using std::vector;
 using std::array;

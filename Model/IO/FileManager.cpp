@@ -17,13 +17,12 @@ bool IO::FileManager::extension_checker(const string & extension)
 
 ifstream IO::FileManager::open_file(path & file_path)
 {
-	if (!file_exists(file_path)) {
-		
-		throw 1;	
-	}
-	if (!extension_checker(file_path.extension().string())) {
-		throw 2;	//TODO the same
-	}
+	if (!file_exists(file_path))
+        throw FileNotExistException(file_path.string());
+
+	if (!extension_checker(file_path.extension().string()))
+        throw IncorrectFileFormatException(file_path.string());
+
 	return ifstream(file_path.make_preferred().string());
 }
 

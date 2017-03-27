@@ -33,7 +33,7 @@ namespace Common
     typedef array<VertexID,4> Element_T4;	//< Tetrahedral element with 4 vertices.
     typedef array<VertexID,6> Element_P6;	//< Prismatic elements with 6 vertices.
     typedef array<VertexID,3> Element_T3;	//< Triangular face element with 3 vertices.
-	typedef array<VertexID,4> Element_Q4;	//< Quadrilateral face element with 4 vertices.
+    typedef array<VertexID,4> Element_Q4;	//< Quadrilateral face element with 4 vertices.
 	
     class CommonMeshRepresentation
     {
@@ -43,9 +43,9 @@ namespace Common
 
         vector<Vertex>      vertices;
         vector<Element_T4>     elementsT4;
-	    vector<Element_P6>     elementsP6;
-		vector<Element_T3>     elementsT3;
-		vector<Element_Q4>     elementsQ4;
+        vector<Element_P6>     elementsP6;
+        vector<Element_T3>     elementsT3;
+        vector<Element_Q4>     elementsQ4;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.

@@ -1,10 +1,11 @@
-#pragma #ifndef MESHIS_MESH_EXPORTER_H_
+#pragma 
+#ifndef MESHIS_MESH_EXPORTER_H_
 #define MESHIS_MESH_EXPORTER_H_
 
 #include <string>
-#include "CommonMeshRepresentation.h"
-
+#include "../../Common/CommonMeshRepresentation.h"
 using std::string;
+using MeshIS::Model::Common::CMR;
 
 namespace MeshIS
 {
