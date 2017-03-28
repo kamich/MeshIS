@@ -1,10 +1,10 @@
-#pragma once
 //
 // Created by lordkopakos on 2017-03-17.
 //
 
 //#ifndef PROJECTCPP_NASTRANEXPORTER_H
 //#define PROJECTCPP_NASTRANEXPORTER_H
+#pragma once
 
 #include "MeshExporter.h"
 #include<iostream>
@@ -37,11 +37,9 @@ namespace MeshIS
 				};
 
 				private:	string absolute_file_path;
-				private:	std::ofstream os;
 
 				private:    Type_Of_Nastran_Version state_of_nastran_version;
 				private:	Type_Of_Method_Continuation state_of_continuation_entrie;
-
 				private:	short int gap;
 
 				public:     NastranExporter();
@@ -51,7 +49,7 @@ namespace MeshIS
 				public:		void virtual Export(const string& absolute_file_path, const MeshIS::Model::Common::CMR& mesh_data);
 				private:	void set_absolute_file_path(const string& absolute_file_path);
 				private:    vector<string> create_nastran_file_from_CMR(const MeshIS::Model::Common::CMR & mesh_data);
-
+				
 				private:	void create_bulk_data(const MeshIS::Model::Common::CMR & mesh_data);
 				private:	void set_GRID(const MeshIS::Model::Common::CMR & mesh_data);
 				private:	void set_CTETRA(const MeshIS::Model::Common::CMR & mesh_data);
@@ -65,4 +63,3 @@ namespace MeshIS
 		}
 	}
 }
-
