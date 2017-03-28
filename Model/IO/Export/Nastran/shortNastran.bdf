@@ -1,5 +1,16 @@
+BEGIN BULK
+$
+$ GRID POINTS DESCRIBE THE GEOMETRY
+$
 GRID    1       0       5.0000004.0000003.000000
 GRID    2       0       5.0000004.0000003.000000
 GRID    3       0       5.0000004.0000003.000000
+$
+$ TETRAHEDRAL ELEMENTS
+$
 CTETRA  1       0       1       2       3       4       
+$
+$ PRISMATIC ELEMENTS
+$
 CPENTA  1       0       2       3       4       5       6       3       
+END DATA

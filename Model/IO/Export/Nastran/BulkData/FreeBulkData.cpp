@@ -1,5 +1,6 @@
 #include "FreeBulkData.h"
 
+using namespace MeshIS::Model::Export::Nastran::BData;
 
 FreeBulkData::FreeBulkData() {
 }

@@ -1,6 +1,6 @@
 #include "ShortBulkData.h"
 
-
+using namespace MeshIS::Model::Export::Nastran::BData;
 
 ShortBulkData::ShortBulkData()
 {
@@ -25,9 +25,9 @@ void ShortBulkData::set_id(string & line, int ID)
 	add_variable_to_line(ID, line);
 }
 
-void ShortBulkData::set_number_of_PSOLID(string & GRID_line, int PSOLID_ID)
+void ShortBulkData::set_number_of_PSOLID(string & line, int PSOLID_ID)
 {
-	add_variable_to_line(PSOLID_ID, GRID_line);
+	add_variable_to_line(PSOLID_ID, line);
 }
 
 template<class type_of_mesh_part>

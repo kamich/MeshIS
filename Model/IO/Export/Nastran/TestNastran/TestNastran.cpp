@@ -1,6 +1,6 @@
 #include "TestNastran.h"
 
-
+using namespace MeshIS::Model::Export::Nastran::TNastran;
 
 TestNastran::TestNastran()
 {
@@ -163,7 +163,7 @@ mesh_part TestNastran::init_mesh_part(
 	std::vector<string> line_vector)
 {
 	mesh_part mp;
-	int mp_index = 0;
+	auto mp_index = 0;
 	for (auto coordinate_string : line_vector) 
 	{
 		double coordinate= atof(coordinate_string.c_str());

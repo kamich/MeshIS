@@ -1,5 +1,6 @@
 #include"NastranExporter.h"
 #include"TestNastran.h"
+using namespace MeshIS::Model::Export::Nastran::TNastran;
 int main()
 {
 	TestNastran tn;
