@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\JetBrains\CLion 2016.3.4\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\AbaqusExporter.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\AbaqusExporter.dir/objects.a @CMakeFiles\AbaqusExporter.dir\objects1.rsp
+C:\MinGW\bin\g++.exe  -g   -Wl,--whole-archive CMakeFiles\AbaqusExporter.dir/objects.a -Wl,--no-whole-archive  -o AbaqusExporter.exe -Wl,--out-implib,libAbaqusExporter.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\AbaqusExporter.dir\linklibs.rsp
