@@ -13,6 +13,7 @@ using MeshIS::Model::Common::VertexID;
 vector<Vertex> vertexes;
 vector<Element_T4> elements;
 CMR cmr;
+CMR cmr2;
 void loadElements();
 
 int main() {
@@ -42,4 +43,5 @@ void loadElements(){
     cmr.elementsT4.push_back(element);
 
     cmr.elementsP6.push_back(element_p6);
+
 }

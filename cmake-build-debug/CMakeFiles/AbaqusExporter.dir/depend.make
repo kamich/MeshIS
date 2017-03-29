@@ -5,9 +5,11 @@ CMakeFiles/AbaqusExporter.dir/AbaqusExporter.cpp.obj: ../AbaqusExporter.cpp
 CMakeFiles/AbaqusExporter.dir/AbaqusExporter.cpp.obj: ../AbaqusExporter.h
 CMakeFiles/AbaqusExporter.dir/AbaqusExporter.cpp.obj: ../Model/Common/CommonMeshRepresentation.h
 CMakeFiles/AbaqusExporter.dir/AbaqusExporter.cpp.obj: ../Model/IO/Export/MeshExporter.h
+CMakeFiles/AbaqusExporter.dir/AbaqusExporter.cpp.obj: ../helperMethods.h
 
 CMakeFiles/AbaqusExporter.dir/main.cpp.obj: ../AbaqusExporter.h
 CMakeFiles/AbaqusExporter.dir/main.cpp.obj: ../Model/Common/CommonMeshRepresentation.h
 CMakeFiles/AbaqusExporter.dir/main.cpp.obj: ../Model/IO/Export/MeshExporter.h
+CMakeFiles/AbaqusExporter.dir/main.cpp.obj: ../helperMethods.h
 CMakeFiles/AbaqusExporter.dir/main.cpp.obj: ../main.cpp
 

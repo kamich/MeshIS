@@ -23,6 +23,8 @@ Model/Common/CommonMeshRepresentation.h
 C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/Model/Common/CommonMeshRepresentation.h
 Model/IO/Export/MeshExporter.h
 C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/Model/IO/Export/MeshExporter.h
+helperMethods.h
+C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/helperMethods.h
 
 C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/Model/Common/CommonMeshRepresentation.h
 vector
@@ -35,6 +37,14 @@ string
 -
 ../../Common/CommonMeshRepresentation.h
 C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/Model/Common/CommonMeshRepresentation.h
+
+C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/helperMethods.h
+fstream
+-
+array
+-
+vector
+-
 
 C:/Users/Feonrr/CLionProjects/AbaqusExporter/MeshIS/main.cpp
 iostream
