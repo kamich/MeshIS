@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/Common/CommonMeshRepresentation.h
+vector
+-
+array
+-
+
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Importer.cpp
+Abaqus_Importer.h
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Importer.h
+
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Importer.h
+../MeshImporter.h
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/MeshImporter.h
+iostream
+-
+fstream
+-
+sstream
+-
+math.h
+-
+
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/MeshImporter.h
+string
+-
+../../Common/CommonMeshRepresentation.h
+C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/Common/CommonMeshRepresentation.h
+

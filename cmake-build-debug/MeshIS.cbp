@@ -97,10 +97,10 @@
 		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/IO_Exceptions.h">
 			<Option target="MeshIS"/>
 		</Unit>
-		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Import.cpp">
+		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Importer.cpp">
 			<Option target="MeshIS"/>
 		</Unit>
-		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Import.h">
+		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/Abaqus/Abaqus_Importer.h">
 			<Option target="MeshIS"/>
 		</Unit>
 		<Unit filename="C:/Users/Lukasz Gardiasz/Documents/IO/MeshIS/Model/IO/Import/MeshImporter.h">

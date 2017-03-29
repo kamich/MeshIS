@@ -54,7 +54,7 @@ void Abaqus_Importer::Set_Nodes(std::fstream data_file, MeshIS::Model::Common::C
             node_dim[0] = scientific_notation(node_dimension[0]);
             node_dim[1] = scientific_notation(node_dimension[1]);
             node_dim[2] = scientific_notation(node_dimension[2]);
-            Abaqus_Elements.vertices.push_back(node_dim);
+            Abaqus_Elements.vertices.push_back({node_dim[0], node_dim[1], node_dim[2]});
 
         }
 
@@ -95,6 +95,10 @@ void Abaqus_Importer::Set_Elements(std::fstream data_file, MeshIS::Model::Common
             iss>>element_id>>nodes_in_element[0]>>nodes_in_element[1]
                >>nodes_in_element[2]>>nodes_in_element[3];
 
+            Abaqus_Elements.elementsT4.push_back({nodes_in_element[0], nodes_in_element[1],
+                                                  nodes_in_element[2], nodes_in_element[3]});
+
+
 
 
         }
@@ -103,7 +107,6 @@ void Abaqus_Importer::Set_Elements(std::fstream data_file, MeshIS::Model::Common
         if(positions_start != string::npos){
             start_import = true;
         }
-
 
 
     }

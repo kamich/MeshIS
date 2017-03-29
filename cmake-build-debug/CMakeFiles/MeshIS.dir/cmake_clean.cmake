@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj"
+  "CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj"
   "MeshIS.pdb"
   "MeshIS.exe"
   "MeshIS.exe.manifest"

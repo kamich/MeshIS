@@ -56,38 +56,38 @@ include CMakeFiles/MeshIS.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MeshIS.dir/flags.make
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj: CMakeFiles/MeshIS.dir/flags.make
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj: ../Model/IO/Import/Abaqus/Abaqus_Import.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj"
-	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Import.cpp.obj -c "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Import.cpp"
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj: CMakeFiles/MeshIS.dir/flags.make
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj: ../Model/IO/Import/Abaqus/Abaqus_Importer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj"
+	C:\MinGW\bin\g++.exe   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Importer.cpp.obj -c "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Importer.cpp"
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.i"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Import.cpp" > CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Import.cpp.i
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.i"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Importer.cpp" > CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Importer.cpp.i
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.s"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Import.cpp" -o CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Import.cpp.s
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.s"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Lukasz Gardiasz\Documents\IO\MeshIS\Model\IO\Import\Abaqus\Abaqus_Importer.cpp" -o CMakeFiles\MeshIS.dir\Model\IO\Import\Abaqus\Abaqus_Importer.cpp.s
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.requires:
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.requires:
 
-.PHONY : CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.requires
+.PHONY : CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.requires
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.provides: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\MeshIS.dir\build.make CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.provides.build
-.PHONY : CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.provides
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.provides: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\MeshIS.dir\build.make CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.provides.build
+.PHONY : CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.provides
 
-CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.provides.build: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj
+CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.provides.build: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj
 
 
 # Object files for target MeshIS
 MeshIS_OBJECTS = \
-"CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj"
+"CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj"
 
 # External object files for target MeshIS
 MeshIS_EXTERNAL_OBJECTS =
 
-MeshIS.exe: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj
+MeshIS.exe: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj
 MeshIS.exe: CMakeFiles/MeshIS.dir/build.make
 MeshIS.exe: CMakeFiles/MeshIS.dir/linklibs.rsp
 MeshIS.exe: CMakeFiles/MeshIS.dir/objects1.rsp
@@ -100,7 +100,7 @@ CMakeFiles/MeshIS.dir/build: MeshIS.exe
 
 .PHONY : CMakeFiles/MeshIS.dir/build
 
-CMakeFiles/MeshIS.dir/requires: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Import.cpp.obj.requires
+CMakeFiles/MeshIS.dir/requires: CMakeFiles/MeshIS.dir/Model/IO/Import/Abaqus/Abaqus_Importer.cpp.obj.requires
 
 .PHONY : CMakeFiles/MeshIS.dir/requires
 
