@@ -26,8 +26,8 @@ namespace MeshIS
 		{
 		private:
 			string importFormat, importFileName, exportFormat, exportFileName;
-			MeshImporter *importer = NULL;
-			MeshExporter *exporter = NULL; 
+			MeshImporter *importer;
+			MeshExporter *exporter; 
 
 		public:
 			Converter(Tests::TestImporter* importer, Tests::TestExporter* exporter);

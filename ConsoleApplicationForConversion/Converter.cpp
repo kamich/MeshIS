@@ -9,7 +9,11 @@ namespace MeshIS
 {
 	namespace ConsoleApplicationForConversion
 	{
-		Converter::Converter() {}
+		Converter::Converter()
+		{
+			importer = nullptr;
+			exporter = nullptr;
+		}
 		Converter::Converter(Tests::TestImporter* importer, Tests::TestExporter* exporter)
 		{
 			this->importer = importer;
@@ -28,7 +32,7 @@ namespace MeshIS
 			}
 			SetFilesAndFormatsNamesFromCommandLineArgs(argv);
 
-			if (importer == NULL || exporter == NULL)
+			if (importer == nullptr || exporter == nullptr)
 			{
 				ChooseAndSetImporer();
 				ChooseAndSetExporter();
@@ -116,8 +120,8 @@ namespace MeshIS
 		{
 /*
 			boost::filesystem::path path(fileName);
-			string absolutePath = boost::filesystem::complete(path);
-			return absolutePath;
+			boost::filesystem::path absolutePath = boost::filesystem::complete(path);
+			return absolutePath.string();
 */
 			return fileName;
 		}

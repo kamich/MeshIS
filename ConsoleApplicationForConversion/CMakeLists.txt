@@ -1,25 +1,34 @@
+cmake_minimum_required(VERSION 2.8)
 
 PROJECT( ConsoleApplicationForConversion )
-
 add_subdirectory( Tests )
-include_directories( ConsoleApplicationForConversion ../Model)
 
-set(SOURCE_FILES
-	../Model/Common/CommonMeshRepresentation.h		
-	../Model/IO/Export/MeshExporter.h		
-	../Model/IO/Import/MeshImporter.h		
-	../Model/IO/IO_Exceptions.h
-	Tests/TestExporter.h 
-	Tests/TestImporter.h 
-	Tests/ConversionTest.h
-	Converter.h )
+set( BOOST_ROOT "C:/Boost")
+set( Boost_INCLUDE_DIR "C:/Boost/include/boost-1_63")
+set( Boost_LIBRARY_DIR "C:/Boost/lib")
+find_package(Boost 1.63 COMPONENTS system filesystem REQUIRED)
+message(status "** Boost Include: ${Boost_INCLUDE_DIR}")
+message(status "** Boost Libraries: ${Boost_LIBRARY_DIRS}")
+message(status "** Boost Libraries: ${Boost_LIBRARIES}")
 
+ 
+set(CUSTOM_HDR
+	${CMAKE_CURRENT_SOURCE_DIR}/../Model/Common/CommonMeshRepresentation.h		
+	${CMAKE_CURRENT_SOURCE_DIR}/../Model/IO/Export/MeshExporter.h		
+	${CMAKE_CURRENT_SOURCE_DIR}/../Model/IO/Import/MeshImporter.h		
+	${CMAKE_CURRENT_SOURCE_DIR}/../Model/IO/IO_Exceptions.h
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/TestExporter.h 
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/TestImporter.h 
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/ConversionTest.h
+	${CMAKE_CURRENT_SOURCE_DIR}/Converter.h )
+include_directories(${CUSTOM_HDR})
 
-#find_package(Boost 1.63 COMPONENTS filesystem REQUIRED)
-#INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
-#LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
-
-add_executable(Application ${SOURCE_FILES} main.cpp Converter.cpp Tests/TestExporter.cpp Tests/TestImporter.cpp Tests/ConversionTest.cpp)
-
-#TARGET_LINK_LIBRARIES( Application ${Boost_LIBRARIES} )
-
+set( CTR_SOURCE 
+	${CMAKE_CURRENT_SOURCE_DIR}/main.cpp 
+	${CMAKE_CURRENT_SOURCE_DIR}/Converter.cpp
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/TestExporter.cpp 
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/TestImporter.cpp 
+	${CMAKE_CURRENT_SOURCE_DIR}/Tests/ConversionTest.cpp)
+add_executable(Application ${CTR_SOURCE} )
+ 
+target_link_libraries( Application ${Boost_LIBRARIES} )
