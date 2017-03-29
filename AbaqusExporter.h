@@ -9,7 +9,7 @@
 using std::string;
 using MeshIS::Model::Common::CMR;
 using MeshIS::Model::Common::Element_T4;
-using MeshIS::Model::Common::Vertex;
+
 
 class AbaqusExporter: public MeshIS::Model::Export::MeshExporter{
 public:
@@ -18,9 +18,13 @@ public:
 
 private:
     std::string getSeparator(double number){ return number<0?"-":" "; }
-    void printElements(std::fstream & file,vector<Element_T4> elements);
-    void printVertexes(std::fstream & file,vector<Vertex> vertexes);
+    void printElements(std::fstream & file, const CMR &mesh_data);
+    void printVertexes(std::fstream &file, const CMR &mesh_data);
     void printInformation(std::fstream & file,vector<std::string> information);
+    void printElementHeader(std::fstream & file,std::string elementType);
+    void printSingleElementType(std::fstream &file,const CMR &mesh_data, std::string elemntType);
+    void printSets(std::fstream &file, const CMR &mesh_data);
+
 };
 
 

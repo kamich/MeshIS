@@ -41,7 +41,7 @@ namespace Common
 
         vector<Vertex>      vertices;
         vector<Element_T4>     elementsT4;
-	vector<Element_P6>     elementsP6;
+	    vector<Element_P6>     elementsP6;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
