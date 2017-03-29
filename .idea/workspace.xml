@@ -10,22 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008a1211-e53d-4d62-8a33-dd5a18126ea3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/cpp1.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cpp1.VC.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cpp1.sln" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cpp1.vcxproj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cpp1.vcxproj.filters" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cpp1.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/LongBulkData.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/LongBulkData.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/ShortBulkData.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/ShortBulkData.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter/NastranExporter.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter/NastranExporter.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/TestNastran/TestNastran.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/TestNastran/TestNastran.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/LongBulkData.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/LongBulkData.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/ShortBulkData.cpp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/ShortBulkData.h" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.cpp" afterPath="$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h" afterPath="$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/IO/Export/MeshExporter.h" afterPath="$PROJECT_DIR$/Model/IO/Export/MeshExporter.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/IO/IO_Exceptions.h" afterPath="$PROJECT_DIR$/Model/IO/IO_Exceptions.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/IO/Import/MeshImporter.h" afterPath="$PROJECT_DIR$/Model/IO/Import/MeshImporter.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,38 +57,96 @@
     <favorites_list name="cpp1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommonMeshRepresentation.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FreeBulkData.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BulkData.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.45719603">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="CommonMeshRepresentation.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="example1_free.bdf" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/FREE/example1_free.bdf">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="7820">
+                  <caret line="460" column="37" lean-forward="false" selection-start-line="460" selection-start-column="37" selection-end-line="460" selection-end-column="37" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="MeshExporter.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="436">
+                  <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MeshImporter.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Import/MeshImporter.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="130">
+                  <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BulkData.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BulkData.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FreeBulkData.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="FreeBulkData.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,6 +157,10 @@
         <option value="$PROJECT_DIR$/Model/IO/Import/MeshImporter.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h" />
+        <option value="$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.cpp" />
+        <option value="$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.h" />
+        <option value="$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.h" />
+        <option value="$PROJECT_DIR$/Model/IO/Export/MeshExporter.h" />
       </list>
     </option>
   </component>
@@ -95,10 +171,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -190,6 +266,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Nastran" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LONG" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -321,6 +401,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="IO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Export" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nastran" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BulkData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpp1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpp1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -336,6 +446,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpp1" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpp1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmake-build-debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CMakeFiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,12 +655,15 @@
       <workItem from="1489779268553" duration="1803000" />
       <workItem from="1490367833624" duration="238000" />
       <workItem from="1490477666082" duration="1517000" />
-      <workItem from="1490487216133" duration="894000" />
+      <workItem from="1490487216133" duration="5280000" />
+      <workItem from="1490622308069" duration="1934000" />
+      <workItem from="1490721627107" duration="858000" />
+      <workItem from="1490785533534" duration="62000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5480000" />
+    <option name="totallyTimeSpent" value="12720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -544,13 +675,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1852123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16041666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24312897" sideWeight="0.49375" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24312897" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -577,6 +708,24 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/SHORT/example1_small.bdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18853">
+          <caret line="1109" column="6" lean-forward="false" selection-start-line="1109" selection-start-column="0" selection-end-line="1109" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.cpp" />
+    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/FREE/example1_free.bdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7905">
+          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.cpp" />
     <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -597,26 +746,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="42" column="29" lean-forward="true" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h" />
     <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -645,22 +779,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp" />
     <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/FREE/example1_free.bdf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7905">
           <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,14 +798,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h" />
     <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -707,22 +827,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp" />
     <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/FREE/example1_free.bdf">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7905">
           <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -733,14 +846,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h" />
     <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -749,20 +855,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/SHORT/example1_small.bdf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/SHORT/mesh.nas">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -770,62 +863,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
+    <entry file="file://$PROJECT_DIR$/Model/IO/IO_Exceptions.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="556">
+          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h" />
+    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/LONG/test1_fluent.bdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15330">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/LONG/example1_long.bdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/FREE/example1_free.bdf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="465" column="0" lean-forward="false" selection-start-line="465" selection-start-column="0" selection-end-line="465" selection-end-column="0" />
+        <state relative-caret-position="7820">
+          <caret line="460" column="37" lean-forward="false" selection-start-line="460" selection-start-column="37" selection-end-line="460" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.h">
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.h" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.cpp" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        <state relative-caret-position="436">
+          <caret line="29" column="27" lean-forward="false" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.h" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.h" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/LongBulkData.h" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/ShortBulkData.cpp" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/FreeBulkData.cpp" />
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/NastranExporter.cpp" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestData/MeshFiles/Nastran/SHORT/example1_small.bdf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1109" column="6" lean-forward="false" selection-start-line="1109" selection-start-column="0" selection-end-line="1109" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/IO/Import/MeshImporter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="130">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/IO_Exceptions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="42" column="29" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/ExportNastran/NastranExporter.h">
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -833,10 +950,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData.h">
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/BulkData.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/Nastran/BulkData/FreeBulkData.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
