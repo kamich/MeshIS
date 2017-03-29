@@ -16,7 +16,7 @@ namespace IO
 class FileException : public std::runtime_error {
 public:
 
-  FileException(const string& file_name)
+  FileException(const std::string& file_name)
   : runtime_error("Problem with file:"+file_name), problematic_file_name(file_name)
   {}
 
@@ -26,11 +26,12 @@ public:
   }
 
 private:
-  string problematic_file_name;
+  std::string problematic_file_name;
 };
 
 /// For the case when file string is ill-formatted.
-class InvalidFileNameException : public FileException {};
+class InvalidFileNameException : public FileException 
+{};
 
 /// For the case when file string is correctly formatted, but no such file exist.
 class FileNotExistException : public FileException {};
