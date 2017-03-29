@@ -1,4 +1,5 @@
-#pragma #ifndef MESHIS_IO_EXCEPTIONS_H_
+#pragma 
+#ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 
 #include <stdexcept>
@@ -16,7 +17,7 @@ namespace IO
 class FileException : public std::runtime_error {
 public:
 
-  FileException(const string& file_name)
+  FileException(const std::string& file_name)
   : runtime_error("Problem with file:"+file_name), problematic_file_name(file_name)
   {}
 
@@ -26,7 +27,7 @@ public:
   }
 
 private:
-  string problematic_file_name;
+  std::string problematic_file_name;
 };
 
 /// For the case when file string is ill-formatted.
