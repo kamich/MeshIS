@@ -1,6 +1,7 @@
 #include "ParaviewVTKXMLexporter.h"
-#include<boost\filesystem.hpp>
-#include<iostream>
+#include <boost\filesystem.hpp>
+#include <iostream>
+#include <fstream>
 
 namespace MeshIS
 {
@@ -33,15 +34,6 @@ namespace MeshIS
 					std::cout << "Incorrect filetype. Correct is .vtu. Please change filetype." << std::endl;
 					return;
 				}
-
-				/*
-				char filetype[3] = { absolute_file_path[absolute_file_path.length() - 3],
-									 absolute_file_path[absolute_file_path.length() - 2],
-									 absolute_file_path[absolute_file_path.length() - 1]};
-				if (filetype != ".vtk") {
-					std::cout << "Incorrect filetype. Correct is .vtk. Please change filetype." << std::endl;
-					return;
-				}*/
 
 				std::fstream fileStream;
 				fileStream.open(absolute_file_path, std::fstream::out);
@@ -120,7 +112,9 @@ namespace MeshIS
 
 				fileStream.close();
 			}
-
+			void ParaviewVTKXMLExporter:: setConnectivities(const vector<Element_T4>  connectivities){
+				this.connecitivities = connecitivities;
+			}
 		}
 	}
 }
