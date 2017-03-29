@@ -29,6 +29,6 @@ public:
 class Point5D
 {
 public:
-    double a,b,c,d,e;
+    int a,b,c,d,e;
 };
 #endif //MESHIS_MASTER_ANSYS_H

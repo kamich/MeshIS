@@ -98,16 +98,15 @@ void Ansys::setSizeNodeElement(fstream & file){
     getHowMany(file);
 }
 MeshIS::Model::Common::CMR Ansys::savetoCmrObject() {
- //funcio which save to object CMR;
+ //funcion which save to object CMR;
     MeshIS::Model::Common::CMR result;
     for(int i=0;i<sizeNode;i++)
     {
-        result.vertices.push_back(tabNode[i]);
-        //copy to object result
+        result.vertices.push_back({tabNode[i].x,tabNode[i].y,tabNode[i].z,});
     }
     for(int i=0;i<sizeElement;i++)
     {
-        result.elementsP6.push_back(tabElement[i]);
+        result.elementsP6.push_back({tabElement[i].a,tabElement[i].b,tabElement[i].c,tabElement[i].d,tabElement[i].e,0});
     }
 
     return result;
