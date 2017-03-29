@@ -4,20 +4,21 @@
 #include <cmath>
 #include "AbaqusExporter.h"
 
-const std::array<std::string,4> headers = {
+
+const std::array<std::string, 4> headers = {
         "*HEADING",
         "ABAQUS input deck",
         "**         Nodes",
         "*NODE, NSET=NALL"
 };
-const std::array<std::string,5> footer = {
+const std::array<std::string, 5> footer = {
         "**All elements set",
         "*ELSET, GENERATE, ELSET=EALL",
         "1, 1942",
         "**         Node sets",
         "*NSET, NSET=wall-solid"
 };
-const std::array<std::string,13> ending = {
+const std::array<std::string, 13> ending = {
         "**         Element sets",
         "**         Element properties",
         "*SOLID SECTION, ELSET=PID3, MATERIAL=MID3",
@@ -35,13 +36,16 @@ const std::array<std::string,13> ending = {
 
 const std::string elementHeader = "**         Elements";
 
-void AbaqusExporter::Export(const string &absolute_file_path, const CMR &mesh_data) {
-    if(mesh_data.vertices.size()>0) {
-        writeToFile(absolute_file_path,mesh_data);
-    }
 
+
+void AbaqusExporter::Export(const string &absolute_file_path, const CMR &mesh_data) {
+    if (mesh_data.vertices.size() > 0) {
+        writeToFile(absolute_file_path, mesh_data);
+    }
 }
-void AbaqusExporter::writeToFile(const string &absolute_file_path, const CMR &mesh_data){
+
+void AbaqusExporter::writeToFile(const string &absolute_file_path, const CMR &mesh_data) {
+
     std::fstream fs(absolute_file_path, std::ios::out);
     fileUtils::printInformation(fs, headers);
     printVertexes(fs, mesh_data);
@@ -52,12 +56,14 @@ void AbaqusExporter::writeToFile(const string &absolute_file_path, const CMR &me
 }
 
 void AbaqusExporter::printElements(std::fstream &file, const CMR &mesh_data) {
+    std::string tetraHedron="C3D4";
+    std::string prism="C3D6";
     file << "**         Elements" << std::endl;
-    printElementHeader(file, "C3D4");
-    fileUtils::loadSingleElement(file,mesh_data.elementsT4);
+    printElementHeader(file, tetraHedron);
+    fileUtils::loadSingleElement(file, mesh_data.elementsT4);
     if (mesh_data.elementsP6.size() > 0) {
-        printElementHeader(file, "C3D6");
-        fileUtils::loadSingleElement(file,mesh_data.elementsT4);
+        printElementHeader(file,prism);
+        fileUtils::loadSingleElement(file, mesh_data.elementsT4);
     }
 }
 
@@ -70,8 +76,9 @@ void AbaqusExporter::printVertexes(std::fstream &file, const CMR &mesh_data) {
         file << std::endl;
     }
 }
+
 void AbaqusExporter::printSets(std::fstream &file, const CMR &mesh_data) {
-    fileUtils::printInformation(file,footer);
+    fileUtils::printInformation(file, footer);
     for (int i = 1; i < 222; i++) {//CMR doesn't contain Sets so setting as default 222
         file << i << ",";
         if (i % 8 == 0)file << std::endl;
@@ -79,5 +86,5 @@ void AbaqusExporter::printSets(std::fstream &file, const CMR &mesh_data) {
 }
 
 void AbaqusExporter::printElementHeader(std::fstream &file, std::string elementType) {
-    file<<"*ELEMENT, TYPE=" + elementType + ", ELSET=PID3"<<std::endl;
+    file << "*ELEMENT, TYPE=" + elementType + ", ELSET=PID3" << std::endl;
 }
