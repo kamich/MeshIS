@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/Common/CommonMeshRepresentation.h
+vector
+-
+array
+-
+
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/IO/Import/ANSYS/Ansys.cpp
+Ansys.h
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/IO/Import/ANSYS/Ansys.h
+
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/IO/Import/ANSYS/Ansys.h
+iostream
+-
+fstream
+-
+../MeshImporter.h
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/IO/Import/MeshImporter.h
+
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/IO/Import/MeshImporter.h
+string
+-
+../../Common/CommonMeshRepresentation.h
+C:/Users/Grzesiek/Documents/MeshIS-master/Model/Common/CommonMeshRepresentation.h
+

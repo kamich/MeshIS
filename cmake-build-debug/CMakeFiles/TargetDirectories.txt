@@ -1,0 +1,3 @@
+C:/Users/Grzesiek/Documents/MeshIS-master/cmake-build-debug/CMakeFiles/MeshIS_master.dir
+C:/Users/Grzesiek/Documents/MeshIS-master/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Grzesiek/Documents/MeshIS-master/cmake-build-debug/CMakeFiles/rebuild_cache.dir
