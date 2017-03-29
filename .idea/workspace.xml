@@ -12,8 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bfe054d-6e27-4bb0-9c1a-a67cdcfe7598" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AbaqusExporter.cpp" afterPath="$PROJECT_DIR$/AbaqusExporter.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Model/IO/IO_Exceptions.h" afterPath="$PROJECT_DIR$/Model/IO/IO_Exceptions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +31,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            <state relative-caret-position="308">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,16 +48,17 @@
               <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+                <marker date="1490790834560" expanded="true" signature="1076:1178" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.inp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.inp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/test.inp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1188">
-              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+              <caret line="54" column="7" lean-forward="false" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -70,6 +73,7 @@
                 <element signature="e#122#140#0" expanded="true" />
                 <element signature="e#268#290#0" expanded="true" />
                 <element signature="e#636#658#0" expanded="true" />
+                <marker date="1490789893322" expanded="true" signature="740:826" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -100,8 +104,8 @@
       <file leaf-file-name="AbaqusExporter.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AbaqusExporter.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+            <state relative-caret-position="440">
+              <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="71" />
               <folding>
                 <element signature="e#81#131#0" expanded="true" />
               </folding>
@@ -112,9 +116,14 @@
       <file leaf-file-name="CommonMeshRepresentation.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
-              <caret line="43" column="25" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="286">
+              <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="34" />
+              <folding>
+                <marker date="1490784093558" expanded="true" signature="365:1360" ph="{...}" />
+                <marker date="1490784093558" expanded="true" signature="383:1331" ph="{...}" />
+                <marker date="1490784093558" expanded="true" signature="402:1301" ph="{...}" />
+                <marker date="1490784093558" expanded="true" signature="918:1196" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/Model/IO/IO_Exceptions.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="478">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#73#93#0" expanded="true" />
               </folding>
@@ -134,8 +143,8 @@
       <file leaf-file-name="MeshExporter.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+            <state relative-caret-position="396">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -151,7 +160,6 @@
       <list>
         <option value="$PROJECT_DIR$/CommonMeshRepresentation.h" />
         <option value="$PROJECT_DIR$/cmake-build-debug/test.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Model/IO/Export/MeshExporter.h" />
         <option value="$PROJECT_DIR$/cmake-build-debug/test.inp" />
         <option value="$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h" />
@@ -160,6 +168,7 @@
         <option value="$PROJECT_DIR$/helperMethods.h" />
         <option value="$PROJECT_DIR$/AbaqusExporter.cpp" />
         <option value="$PROJECT_DIR$/Model/IO/IO_Exceptions.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -217,28 +226,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="IO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AbaqusExporter" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeshIS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Import" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -499,15 +486,15 @@
       <workItem from="1490631118540" duration="8038000" />
       <workItem from="1490728117834" duration="72000" />
       <workItem from="1490729410316" duration="2945000" />
-      <workItem from="1490780898433" duration="10278000" />
+      <workItem from="1490780898433" duration="11036000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26494000" />
+    <option name="totallyTimeSpent" value="27252000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="2" width="1932" height="1050" extended-state="1" />
+    <frame x="-5" y="2" width="1932" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18025078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -563,6 +550,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <marker date="1490790834560" expanded="true" signature="1076:1178" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -589,7 +577,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1490784093558" expanded="true" signature="365:1360" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="383:1331" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="402:1301" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="918:1196" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -647,7 +640,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1490784093558" expanded="true" signature="365:1360" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="383:1331" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="402:1301" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="918:1196" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -705,7 +703,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1490784093558" expanded="true" signature="365:1360" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="383:1331" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="402:1301" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="918:1196" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -781,6 +784,7 @@
           <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <marker date="1490790834560" expanded="true" signature="1076:1178" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -852,16 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AbaqusExporter.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-          <folding>
-            <element signature="e#81#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/helperMethods.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -870,22 +864,56 @@
             <element signature="e#122#140#0" expanded="true" />
             <element signature="e#268#290#0" expanded="true" />
             <element signature="e#636#658#0" expanded="true" />
+            <marker date="1490789893322" expanded="true" signature="740:826" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/IO/IO_Exceptions.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#73#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/test.inp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1188">
+          <caret line="54" column="7" lean-forward="false" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AbaqusExporter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="71" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="71" />
+          <folding>
+            <element signature="e#81#131#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/Common/CommonMeshRepresentation.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="43" column="25" lean-forward="true" selection-start-line="42" selection-start-column="16" selection-end-line="43" selection-end-column="25" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="34" />
+          <folding>
+            <marker date="1490784093558" expanded="true" signature="365:1360" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="383:1331" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="402:1301" ph="{...}" />
+            <marker date="1490784093558" expanded="true" signature="918:1196" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        <state relative-caret-position="396">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -896,32 +924,15 @@
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+            <marker date="1490790834560" expanded="true" signature="1076:1178" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/Export/MeshExporter.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model/IO/IO_Exceptions.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#73#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/test.inp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        <state relative-caret-position="308">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
