@@ -77,7 +77,7 @@ namespace Import
 			marker.clear();
 		}
 		vtk_legacy_file.close();
-		return cmr;
+		return std::move(cmr);
 	}
 
 	void PVTKLImporter::addElementToCMR(int element_type, std::vector<int>& p)
