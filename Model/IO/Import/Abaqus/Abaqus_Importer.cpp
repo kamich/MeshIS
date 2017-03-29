@@ -55,7 +55,7 @@ void Abaqus_Importer::Set_Nodes(std::fstream data_file, MeshIS::Model::Common::C
             node_dim[1] = scientific_notation(node_dimension[1]);
             node_dim[2] = scientific_notation(node_dimension[2]);
             Abaqus_Elements.vertices.push_back(node_dim);
-            
+
         }
 
         positions_start = line.find("NODE");
@@ -69,6 +69,44 @@ void Abaqus_Importer::Set_Nodes(std::fstream data_file, MeshIS::Model::Common::C
 
 }
 void Abaqus_Importer::Set_Elements(std::fstream data_file, MeshIS::Model::Common::CMR &Abaqus_Elements) {
+
+    string line;
+
+    size_t positions_start;
+    size_t positions_end;
+
+    bool start_import = false;
+    bool end_import = false;
+    int element_id;
+    int nodes_in_element [4];
+
+    while(data_file.eof()){
+        getline(data_file, line);
+
+        positions_end = line.find("set");
+        if(positions_end != string::npos){
+            end_import = true;
+        }
+
+        if(start_import && !end_import){
+            delete_point(line);
+
+            std::istringstream iss(line);
+            iss>>element_id>>nodes_in_element[0]>>nodes_in_element[1]
+               >>nodes_in_element[2]>>nodes_in_element[3];
+
+
+
+        }
+
+        positions_start = line.find("ELEMENT");
+        if(positions_start != string::npos){
+            start_import = true;
+        }
+
+
+
+    }
 
 }
 double Abaqus_Importer::scientific_notation(string coordinates) {
