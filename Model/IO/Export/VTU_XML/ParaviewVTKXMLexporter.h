@@ -15,10 +15,12 @@ namespace MeshIS
 			class ParaviewVTKXMLExporter: public MeshExporter
 			{
 			public:
+				ParaviewVTKXMLExporter(){};
+				ParaviewVTKXMLExporter(const vector<Element_T4>  conn) : connectivities(conn){};
 				void Export(const string& absolute_file_path, const CMR& mesh_data) override;
-				void setConnectivities(const vector<Element_T4>  connectivities);
+				void setConnectivities(const vector<Element_T4>  connectivities) ;
 			private:
-				vector<Element_T4>  connectivities;
+				const vector<Element_T4>  connectivities;
 			};
 
 			typedef  ParaviewVTKXMLExporter VTKXMLImporter;
