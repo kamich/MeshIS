@@ -3,6 +3,7 @@
 
 #include <stdexcept>
 #include <string>
+using std::string;
 
 namespace MeshIS
 {

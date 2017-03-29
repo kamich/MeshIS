@@ -26,6 +26,6 @@ set(SOURCE_FILES
         TestData/MeshFiles/test1.png
         .gitignore
         LICENSE
-        README.md Model/IO/Import/Abaqus/Abaqus_Import.h Model/IO/Import/Abaqus/Abaqus_Import.cpp)
+        README.md Model/IO/Import/Abaqus/Abaqus_Importer.h Model/IO/Import/Abaqus/Abaqus_Importer.cpp)
 
-add_executable(MeshIS ${SOURCE_FILES} Model/IO/Import/Abaqus/Abaqus_Import.h Model/IO/Import/Abaqus/Abaqus_Import.cpp)
+add_executable(MeshIS ${SOURCE_FILES} Model/IO/Import/Abaqus/Abaqus_Importer.h Model/IO/Import/Abaqus/Abaqus_Importer.cpp)
