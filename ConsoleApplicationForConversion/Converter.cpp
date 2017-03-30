@@ -1,7 +1,7 @@
 // Created by maria
 
 #include "Converter.h"
-//#include <boost/filesystem.hpp>
+#include <boost/filesystem.hpp>
 
 using std::cerr;
 
@@ -118,12 +118,9 @@ namespace MeshIS
 
 		string Converter::GetAbsoluteFilePath(const string& fileName)
 		{
-/*
 			boost::filesystem::path path(fileName);
 			boost::filesystem::path absolutePath = boost::filesystem::complete(path);
 			return absolutePath.string();
-*/
-			return fileName;
 		}
 
 	}
