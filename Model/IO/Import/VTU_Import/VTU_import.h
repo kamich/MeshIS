@@ -23,11 +23,7 @@ class VTU_Import : public MeshImporter {
 public:
 
     CMR Import(const string & ) override;
-
-
-private:
-    vector<int> types;
-    vector<int> connectivities;
+    void getVerticesIDs(int range,string data,int cell_count,CMR *cmr);
 
 
 };
