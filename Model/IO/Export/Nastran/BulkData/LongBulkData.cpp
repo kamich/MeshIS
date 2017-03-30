@@ -1,3 +1,7 @@
+//*************************
+//Created by Dominik Kopaczka
+//*************************
+
 #include "LongBulkData.h"
 
 using namespace MeshIS::Model::Export::Nastran::BData;

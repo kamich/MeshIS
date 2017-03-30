@@ -1,6 +1,6 @@
-
-// Created by lordkopakos on 2017-03-17.
-//
+//*************************
+//Created by Dominik Kopaczka
+//*************************
 
 #include "NastranExporter.h"
 

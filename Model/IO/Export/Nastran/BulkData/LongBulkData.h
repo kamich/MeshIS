@@ -1,5 +1,12 @@
-#pragma once
+//*************************
+//Created by Dominik Kopaczka
+//*************************
+
+#ifndef CPPWINLIN_LONGBULKDATA_H
+#define CPPWINLIN_LONGBULKDATA_H
+
 #include"BulkData.h"
+
 namespace MeshIS
 {
 	namespace Model
@@ -26,3 +33,4 @@ namespace MeshIS
 	}
 }
 
+#endif //CPP_LONGBULKDATA_H

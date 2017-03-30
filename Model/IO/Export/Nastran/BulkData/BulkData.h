@@ -1,6 +1,16 @@
-#pragma once
+//*************************
+//Created by Dominik Kopaczka
+//*************************
+
 #include<string>
-#include"CommonMeshRepresentation.h"
+#include "../../../../Common/CommonMeshRepresentation.h"
+
+using std::string;
+
+#ifndef CPPWINLIN_BULKDATA_H
+#define CPPWINLIN_BULKDATA_H
+
+
 using std::string;
 namespace MeshIS
 {
@@ -27,3 +37,4 @@ namespace MeshIS
 	}
 }
 
+#endif //CPP_BULKDATA_H

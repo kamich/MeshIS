@@ -1,5 +1,14 @@
-#pragma once
-#include"BulkData.h"
+//*************************
+//Created by Karol Kiełbasa
+//*************************
+
+#ifndef CPP_FREEBULKDATA_H
+#define CPP_FREEBULKDATA_H
+
+#include "BulkData.h"
+
+using std::string;
+
 namespace MeshIS
 {
 	namespace Model
@@ -27,3 +36,5 @@ namespace MeshIS
 		}
 	}
 }
+
+#endif //CPP_FREEBULKDATA_H

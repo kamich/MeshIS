@@ -1,3 +1,0 @@
-C:/Users/lordkopakos/Desktop/ProjectCpp/cmake-build-debug/CMakeFiles/ProjectCpp.dir
-C:/Users/lordkopakos/Desktop/ProjectCpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lordkopakos/Desktop/ProjectCpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir

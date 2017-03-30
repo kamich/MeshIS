@@ -1,5 +1,12 @@
-#pragma once
+//*************************
+//Created by Dominik Kopaczka
+//*************************
+
+#ifndef CPP_SHORTBULKDATA_H
+#define CPP_SHORTBULKDATA_H
+
 #include"BulkData.h"
+
 namespace MeshIS
 {
 	namespace Model
@@ -58,3 +65,5 @@ namespace MeshIS
 		}
 	}
 }
+
+#endif //CPPWINLIN_SHORTBULKDATA_H

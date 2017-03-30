@@ -1,6 +1,10 @@
-#pragma once
 #include"NastranExporter.h"
 #include<fstream>
+
+//*************************
+//Created by Karol Kiełbasa
+//*************************
+
 using namespace std;
 namespace MeshIS
 {

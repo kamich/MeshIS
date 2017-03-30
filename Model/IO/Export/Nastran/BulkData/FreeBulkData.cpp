@@ -1,5 +1,9 @@
 #include "FreeBulkData.h"
 
+//*************************
+//Created by Karol Kiełbasa
+//*************************
+
 using namespace MeshIS::Model::Export::Nastran::BData;
 
 FreeBulkData::FreeBulkData() {

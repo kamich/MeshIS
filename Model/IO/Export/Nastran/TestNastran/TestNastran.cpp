@@ -1,5 +1,9 @@
 #include "TestNastran.h"
 
+//*************************
+//Created by Karol Kie³basa
+//*************************
+
 using namespace MeshIS::Model::Export::Nastran::TNastran;
 
 TestNastran::TestNastran()
@@ -32,7 +36,7 @@ void TestNastran::print_single_vertex(
 {	
 	cout << "Vertex: ";
 	cout << "ID: " << id << "\t\t";
-	for(int i=0;i<vertex.size();i++)
+	for(auto i=0;i<vertex.size();i++)
 		std::cout << vertex[i]<< " ";
 	std::cout << endl;
 }
@@ -43,7 +47,7 @@ void TestNastran::print_single_element_t4(
 {
 	cout << "elementT4: ";
 	cout << "ID: " << id << "\t";
-	for (int i = 0; i<element.size(); i++)
+	for (auto i = 0; i<element.size(); i++)
 		std::cout << element[i] << " ";
 	std::cout << endl;
 }
@@ -55,7 +59,7 @@ void TestNastran::print_single_element_p6(
 {
 	cout << "elementP6: ";
 	cout << "ID: " << id <<"\t";
-	for (int i = 0; i<element.size(); i++)
+	for (auto i = 0; i<element.size(); i++)
 		std::cout << element[i] << " ";
 	std::cout << endl;
 }
@@ -151,7 +155,6 @@ std::vector<std::string> TestNastran::split(
 	while (line != "") {
 
 		std::string newSign = line.substr(0, line.find(pattern));
-		//usuwam do kolejnego przecinka
 		line = line.erase(0, (line.find(pattern) + 1));
 		splitVector.push_back(newSign);
 
