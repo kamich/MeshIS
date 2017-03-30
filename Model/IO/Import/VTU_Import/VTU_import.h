@@ -6,7 +6,8 @@
 
 #include "../../../Common/CommonMeshRepresentation.h"
 #include "../MeshImporter.h"
-#include "rapidxml.hpp"
+#include "RapidXML/rapidxml.hpp"
+#include "RapidXML/rapidxml_utils.hpp"
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -21,7 +22,8 @@ class VTU_Import : public MeshImporter {
 
 public:
 
-    CMR Import(const string path) override;
+    CMR Import(const string & ) override;
+
 
 private:
     vector<int> types;
