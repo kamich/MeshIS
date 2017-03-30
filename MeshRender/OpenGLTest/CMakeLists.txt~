@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.1)
+set (CMAKE_CXX_STANDARD 11)
 
 ## section: Macro
 MACRO(ADD_MSVC_PRECOMPILED_HEADER PrecompiledHeader PrecompiledSource SourcesVar)
@@ -46,6 +47,7 @@ SET (${this_target}_SOURCE_FILES
     controls.cpp
 	main.cpp
 	shader.cpp
+	Renderer.cpp
 	texture.cpp
 	VertexLoader.cpp
     )
@@ -55,6 +57,7 @@ SET (${this_target}_SOURCE_FILES
 SET(${this_target}_HEADER_FILES
     controls.hpp
 	shader.hpp
+	Renderer.h
 	texture.hpp
 	VertexLoader.h
     )
@@ -67,6 +70,7 @@ SOURCE_GROUP("Header Files" FILES
 	)
 SOURCE_GROUP("Source Files" FILES 
 	main.cpp
+	Renderer.cpp
 	VertexLoader.cpp
 	controls.cpp
 	shader.cpp

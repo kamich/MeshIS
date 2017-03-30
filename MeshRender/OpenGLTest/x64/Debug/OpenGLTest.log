@@ -1,9 +1,17 @@
 ﻿  main.cpp
 c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
-  c:\users\tezeusz woronko\documents\visual studio 2015\projects\opengltest\packages\nupengl.core.0.1.0.1\build\native\include\glfw\glfw3.h(92): note: see previous definition of 'APIENTRY'
-c:\users\tezeusz woronko\documents\visual studio 2015\projects\opengltest\opengltest\vertexloader.h(12): warning C4267: 'return': conversion from 'size_t' to 'const unsigned int', possible loss of data
+  c:\users\tobiw\desktop\studia6\meshis\meshrender\packages\nupengl.core.0.1.0.1\build\native\include\glfw\glfw3.h(92): note: see previous definition of 'APIENTRY'
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\vertexloader.h(14): warning C4267: 'return': conversion from 'size_t' to 'const unsigned int', possible loss of data
   VertexLoader.cpp
-c:\users\tezeusz woronko\documents\visual studio 2015\projects\opengltest\opengltest\vertexloader.h(12): warning C4267: 'return': conversion from 'size_t' to 'const unsigned int', possible loss of data
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\vertexloader.h(14): warning C4267: 'return': conversion from 'size_t' to 'const unsigned int', possible loss of data
+  Renderer.cpp
+c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(130): warning C4005: 'APIENTRY': macro redefinition
+  c:\users\tobiw\desktop\studia6\meshis\meshrender\packages\nupengl.core.0.1.0.1\build\native\include\glfw\glfw3.h(92): note: see previous definition of 'APIENTRY'
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\vertexloader.h(14): warning C4267: 'return': conversion from 'size_t' to 'const unsigned int', possible loss of data
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\renderer.cpp(20): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\renderer.cpp(126): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\renderer.cpp(128): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\tobiw\desktop\studia6\meshis\meshrender\opengltest\renderer.cpp(130): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Generating Code...
-  OpenGLTest.vcxproj -> c:\users\tezeusz woronko\documents\visual studio 2015\Projects\OpenGLTest\x64\Debug\OpenGLTest.exe
-  OpenGLTest.vcxproj -> c:\users\tezeusz woronko\documents\visual studio 2015\Projects\OpenGLTest\x64\Debug\OpenGLTest.pdb (Partial PDB)
+  OpenGLTest.vcxproj -> C:\Users\tobiw\Desktop\studia6\MeshIS\MeshRender\x64\Debug\OpenGLTest.exe
+  OpenGLTest.vcxproj -> C:\Users\tobiw\Desktop\studia6\MeshIS\MeshRender\x64\Debug\OpenGLTest.pdb (Partial PDB)

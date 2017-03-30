@@ -72,6 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>C:\Users\tobiw\Desktop\studia6\kamichis\MeshIS\Model\Common;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\tobiw\Desktop\studia6\MeshIS\Model\Common;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -117,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="controls.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="VertexLoader.cpp" />
@@ -130,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\Model\Common\CommonMeshRepresentation.h" />
     <ClInclude Include="controls.hpp" />
+    <ClInclude Include="Renderer.h" />
     <ClInclude Include="shader.hpp" />
     <ClInclude Include="texture.hpp" />
     <ClInclude Include="VertexLoader.h" />

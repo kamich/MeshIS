@@ -1,1 +1,0 @@
-/usr/bin/c++      CMakeFiles/OpenGLTest.dir/controls.cpp.o CMakeFiles/OpenGLTest.dir/main.cpp.o CMakeFiles/OpenGLTest.dir/shader.cpp.o CMakeFiles/OpenGLTest.dir/texture.cpp.o CMakeFiles/OpenGLTest.dir/VertexLoader.cpp.o  -o OpenGLTest -rdynamic -lGLU -lGL -lGLEW 

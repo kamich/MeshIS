@@ -42,10 +42,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tobiasz/Desktop/kamichis/MeshIS/MeshRender/OpenGLTest
+CMAKE_SOURCE_DIR = /home/tobiasz/Desktop/MeshIS/MeshRender/OpenGLTest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tobiasz/Desktop/kamichis/MeshIS/MeshRender/OpenGLTest
+CMAKE_BINARY_DIR = /home/tobiasz/Desktop/MeshIS/MeshRender/OpenGLTest
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasz/Desktop/kamichis/MeshIS/MeshRender/OpenGLTest/CMakeFiles /home/tobiasz/Desktop/kamichis/MeshIS/MeshRender/OpenGLTest/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasz/Desktop/MeshIS/MeshRender/OpenGLTest/CMakeFiles /home/tobiasz/Desktop/MeshIS/MeshRender/OpenGLTest/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasz/Desktop/kamichis/MeshIS/MeshRender/OpenGLTest/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tobiasz/Desktop/MeshIS/MeshRender/OpenGLTest/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -113,6 +113,30 @@ OpenGLTest: cmake_check_build_system
 OpenGLTest/fast:
 	$(MAKE) -f CMakeFiles/OpenGLTest.dir/build.make CMakeFiles/OpenGLTest.dir/build
 .PHONY : OpenGLTest/fast
+
+Renderer.o: Renderer.cpp.o
+.PHONY : Renderer.o
+
+# target to build an object file
+Renderer.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTest.dir/build.make CMakeFiles/OpenGLTest.dir/Renderer.cpp.o
+.PHONY : Renderer.cpp.o
+
+Renderer.i: Renderer.cpp.i
+.PHONY : Renderer.i
+
+# target to preprocess a source file
+Renderer.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTest.dir/build.make CMakeFiles/OpenGLTest.dir/Renderer.cpp.i
+.PHONY : Renderer.cpp.i
+
+Renderer.s: Renderer.cpp.s
+.PHONY : Renderer.s
+
+# target to generate assembly for a file
+Renderer.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTest.dir/build.make CMakeFiles/OpenGLTest.dir/Renderer.cpp.s
+.PHONY : Renderer.cpp.s
 
 VertexLoader.o: VertexLoader.cpp.o
 .PHONY : VertexLoader.o
@@ -243,6 +267,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenGLTest"
+	@echo "... Renderer.o"
+	@echo "... Renderer.i"
+	@echo "... Renderer.s"
 	@echo "... VertexLoader.o"
 	@echo "... VertexLoader.i"
 	@echo "... VertexLoader.s"
