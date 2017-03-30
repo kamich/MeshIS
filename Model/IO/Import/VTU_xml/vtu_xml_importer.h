@@ -1,9 +1,9 @@
 #ifndef VTU_XML_IMPORTER_H
 #define VTU_XML_IMPORTER_H
 
-#include "..\..\..\Common\CommonMeshRepresentation.h"
-#include "..\MeshImporter.h"
-#include "rapidXML\rapidxml.hpp"
+#include "../../../Common/CommonMeshRepresentation.h"
+#include "../MeshImporter.h"
+#include "rapidXML/rapidxml.hpp"
 #include <fstream>
 #include <iostream>
 #include <sstream>
