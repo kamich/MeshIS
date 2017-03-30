@@ -1,4 +1,5 @@
-#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
+#pragma
+#ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
 /**
@@ -25,7 +26,7 @@ namespace Common
     typedef array<double,3> Vertex;
     typedef int             VertexID;
 
-    typedef int               ElementID;
+    typedef int             ElementID;
 
     // Element is defined as 4 vertices:
     // no need for such simple class either.
@@ -38,9 +39,9 @@ namespace Common
         // Since all fields are well-defined (no pointers, no strange classes),
         // all default constructors etc. will be ok.
 
-        vector<Vertex>      vertices;
+        vector<Vertex>     	   vertices;
         vector<Element_T4>     elementsT4;
-	vector<Element_P6>     elementsP6;
+		vector<Element_P6>     elementsP6;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
