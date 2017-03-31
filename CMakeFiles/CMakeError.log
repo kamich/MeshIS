@@ -1,0 +1,54 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft (R) Build Engine 15.1.548.43366
+Copyright (C) Microsoft Corporation. Wszelkie prawa zastrze¾one.
+
+Kompilacja rozpocz©ˆa si© 2017-03-31 22:07:51.
+Projekt "C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdC\CompilerIdC.vcxproj" w w©«le 1 (domy˜lne elementy docelowe).
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: Nie znaleziono zestawu Windows SDK w wersji 8.1. Zainstaluj wymagan¥ wersj© zestawu Windows SDK lub zmieä wersj© zestawu SDK na stronach wˆa˜ciwo˜ci projektu albo klikaj¥c prawym przyciskiem myszy rozwi¥zanie i wybieraj¥c pozycj© "Wska¾ ponownie rozwi¥zanie". [C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdC\CompilerIdC.vcxproj]
+Kompilowanie projektu "C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdC\CompilerIdC.vcxproj" wykonane (domy˜lne elementy docelowe) - NIEPOWODZENIE.
+
+Kompilacja NIE POWIODA SI¨.
+
+"C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdC\CompilerIdC.vcxproj" (domy˜lny element docelowy) (1)->
+(element docelowy Desktop_PlatformPrepareForBuild) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: Nie znaleziono zestawu Windows SDK w wersji 8.1. Zainstaluj wymagan¥ wersj© zestawu Windows SDK lub zmieä wersj© zestawu SDK na stronach wˆa˜ciwo˜ci projektu albo klikaj¥c prawym przyciskiem myszy rozwi¥zanie i wybieraj¥c pozycj© "Wska¾ ponownie rozwi¥zanie". [C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdC\CompilerIdC.vcxproj]
+
+    Ostrze¾enia: 0
+    Liczba bˆ©d¢w: 1
+
+Czas, kt¢ry upˆyn¥ˆ: 00:00:00.15
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+1
+Microsoft (R) Build Engine 15.1.548.43366
+Copyright (C) Microsoft Corporation. Wszelkie prawa zastrze¾one.
+
+Kompilacja rozpocz©ˆa si© 2017-03-31 22:07:51.
+Projekt "C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdCXX\CompilerIdCXX.vcxproj" w w©«le 1 (domy˜lne elementy docelowe).
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: Nie znaleziono zestawu Windows SDK w wersji 8.1. Zainstaluj wymagan¥ wersj© zestawu Windows SDK lub zmieä wersj© zestawu SDK na stronach wˆa˜ciwo˜ci projektu albo klikaj¥c prawym przyciskiem myszy rozwi¥zanie i wybieraj¥c pozycj© "Wska¾ ponownie rozwi¥zanie". [C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdCXX\CompilerIdCXX.vcxproj]
+Kompilowanie projektu "C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdCXX\CompilerIdCXX.vcxproj" wykonane (domy˜lne elementy docelowe) - NIEPOWODZENIE.
+
+Kompilacja NIE POWIODA SI¨.
+
+"C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdCXX\CompilerIdCXX.vcxproj" (domy˜lny element docelowy) (1)->
+(element docelowy Desktop_PlatformPrepareForBuild) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\Win32\PlatformToolsets\v141\Toolset.targets(34,5): error MSB8036: Nie znaleziono zestawu Windows SDK w wersji 8.1. Zainstaluj wymagan¥ wersj© zestawu Windows SDK lub zmieä wersj© zestawu SDK na stronach wˆa˜ciwo˜ci projektu albo klikaj¥c prawym przyciskiem myszy rozwi¥zanie i wybieraj¥c pozycj© "Wska¾ ponownie rozwi¥zanie". [C:\Users\Marcin\Documents\MeshIS\CMakeFiles\3.8.0-rc4\CompilerIdCXX\CompilerIdCXX.vcxproj]
+
+    Ostrze¾enia: 0
+    Liczba bˆ©d¢w: 1
+
+Czas, kt¢ry upˆyn¥ˆ: 00:00:00.13
+
+
