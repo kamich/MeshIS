@@ -5,6 +5,7 @@
 #include "NastranExporter.h"
 
 MeshIS::Model::Export::Nastran::NastranExporter::NastranExporter()
+: bulkData(nullptr)
 {
 	set_default_state();
 }
@@ -13,7 +14,8 @@ MeshIS::Model::Export::Nastran::NastranExporter::NastranExporter(
 	Type_Of_Nastran_Version state_of_nastran_version,
 	Type_Of_Method_Continuation state_of_continuation_entrie)
 	: state_of_nastran_version(state_of_nastran_version),
-	state_of_continuation_entrie(state_of_continuation_entrie)
+	state_of_continuation_entrie(state_of_continuation_entrie),
+	bulkData(nullptr)
 {
 
 }
