@@ -5,6 +5,7 @@
 #define CONVERTERSION_TEST_H_
 
 #include <string>
+#include <memory>
 #include "TestExporter.h"
 #include "TestImporter.h"
 
@@ -30,8 +31,8 @@ namespace MeshIS
 				void ShouldThrowFileNotExistExceptionFromExporter();
 				void ShouldThrowIncorrectFileFormatExceptionFromExporter();
 
-				TestImporter* getImporter();
-				TestExporter* getExporter();
+				Tests::TestImporter getImporter();
+				Tests::TestExporter getExporter();
 			};
 
 		}

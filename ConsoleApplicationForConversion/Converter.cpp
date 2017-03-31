@@ -14,10 +14,10 @@ namespace MeshIS
 			importer = nullptr;
 			exporter = nullptr;
 		}
-		Converter::Converter(Tests::TestImporter* importer, Tests::TestExporter* exporter)
+		Converter::Converter(Tests::TestImporter importer, Tests::TestExporter exporter)
 		{
-			this->importer = importer;
-			this->exporter = exporter;
+			this->importer.reset(new Tests::TestImporter(importer));
+			this->exporter.reset(new Tests::TestExporter(exporter));
 		}
 
 		void Converter::Convert(int argc, char** argv)
@@ -88,7 +88,9 @@ namespace MeshIS
 		void Converter::ChooseAndSetImporer()
 		{
 			if (importFormat == "TestFormat")
-				importer = new Tests::TestImporter();
+			{
+				importer.reset(new Tests::TestImporter());
+			}
 			else
 			{
 				cerr << "The selected format to import (" << importFormat << ") is not supported." << endl;
@@ -99,7 +101,9 @@ namespace MeshIS
 		void Converter::ChooseAndSetExporter()
 		{
 			if (exportFormat == "TestFormat")
-				exporter = new Tests::TestExporter();
+			{
+				exporter.reset(new Tests::TestExporter());
+			}
 			else
 			{
 				cerr << "The selected format to export (" << exportFormat << ") is not supported." << endl;

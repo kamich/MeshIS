@@ -26,11 +26,11 @@ namespace MeshIS
 		{
 		private:
 			string importFormat, importFileName, exportFormat, exportFileName;
-			MeshImporter *importer;
-			MeshExporter *exporter; 
+			std::unique_ptr<MeshImporter> importer;
+			std::unique_ptr<MeshExporter> exporter;
 
 		public:
-			Converter(Tests::TestImporter* importer, Tests::TestExporter* exporter);
+			Converter(Tests::TestImporter importer, Tests::TestExporter exporter);
 			Converter();
 			void Convert(int amountOfArgs, char** argv);
 

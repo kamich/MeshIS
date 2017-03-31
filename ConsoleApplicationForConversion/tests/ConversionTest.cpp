@@ -25,7 +25,7 @@ namespace MeshIS
 			void ConversionTest::ShouldThrowFileNotExistExceptionFromExporter()
 			{
 				importer.DisableThrowingExceptions();
-				exporter.EnableThrowingInvalidFileNameException();
+				exporter.EnableThrowingFileNotExistException();
 			}
 			void ConversionTest::ShouldThrowInvalidFileNameExceptionFromExporter()
 			{
@@ -35,18 +35,17 @@ namespace MeshIS
 			void ConversionTest::ShouldThrowIncorrectFileFormatExceptionFromExporter()
 			{
 				importer.DisableThrowingExceptions();
-				exporter.EnableThrowingInvalidFileNameException();
+				exporter.EnableThrowingIncorrectFileFormatException();
 			}
 
-			TestImporter* ConversionTest::getImporter()
+			Tests::TestImporter ConversionTest::getImporter()
 			{
-				return &importer;
+				return (importer);
 			}
-			TestExporter* ConversionTest::getExporter()
+			Tests::TestExporter ConversionTest::getExporter()
 			{
-				return &exporter;
+				return (exporter);
 			}
-
 		}
 	}
 }

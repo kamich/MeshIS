@@ -24,11 +24,14 @@ namespace MeshIS
 			class TestExporter : public MeshExporter
 			{
 			private:
-				bool shouldThrowInvalidFileNameException = false;
-				bool shouldThrowFileNotExistException = false;
-				bool shouldThrowIncorrectFileFormatException = false;
+				bool shouldThrowInvalidFileNameException;
+				bool shouldThrowFileNotExistException;
+				bool shouldThrowIncorrectFileFormatException;
 
 			public:
+				TestExporter();
+				TestExporter(TestExporter &exporter);
+
 				void Export(const string & absolute_file_path, const CMR & mesh_data) throw (FileException);
 
 				void EnableThrowingInvalidFileNameException();

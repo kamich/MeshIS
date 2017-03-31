@@ -24,11 +24,14 @@ namespace MeshIS
 			class TestImporter : public MeshImporter
 			{
 			private:
-				bool shouldThrowInvalidFileNameException = false;
-				bool shouldThrowFileNotExistException = false;
-				bool shouldThrowIncorrectFileFormatException = false;
+				bool shouldThrowInvalidFileNameException;
+				bool shouldThrowFileNotExistException;
+				bool shouldThrowIncorrectFileFormatException;
 
 			public:
+				TestImporter();
+				TestImporter(TestImporter &imporetr);
+
 				CMR Import(const string & absolute_file_path) throw (FileException);
 
 				void EnableThrowingInvalidFileNameException();
