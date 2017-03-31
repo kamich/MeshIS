@@ -5,10 +5,11 @@ Install Guide:
 
 Linux:
 Install 4 apps:
-`sudo apt-get install freeglut3 freeglut3-dev`
-`sudo apt-get install libglew-dev`
-`sudo apt-get install libxmu-dev libxi-dev`
-`sudo apt-get install binutils-gold`
+</br>
+`sudo apt-get install freeglut3 freeglut3-dev` </br>
+`sudo apt-get install libglew-dev` </br>
+`sudo apt-get install libxmu-dev libxi-dev` </br>
+`sudo apt-get install binutils-gold` </br>
 
 Windows:
 Put OpenGL libraries into 'C:/Opengl' directory
