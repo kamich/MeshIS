@@ -29,6 +29,9 @@ namespace Common
     typedef int               	ElementID;
     typedef array<FaceID,5> 	Element_F5;	//< Prismatic elements with 5 faces.
 
+	typedef int               	ElementID;
+	typedef array<FaceID, 4> 	Element_F4;	
+
     class ModFemMeshRepresentation : public CMR
     {
         public:
@@ -38,7 +41,8 @@ namespace Common
 		vector<Edge>	 			edges;
 		vector<TriangularFace> 		triangularfaces;
 		vector<QuadrilateralFace> 	quadrilateralfaces;
-		vector<Element_F5>     		elementsF5;
+		vector<Element_F5>     		elementsF5; //elements with 5 faces
+		vector<Element_F4>     		elementsF4;
     };
 
     typedef ModFemMeshRepresentation ModFEMCMR; //< Just for convenience, to avoid typing this long name.
