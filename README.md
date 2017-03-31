@@ -13,4 +13,4 @@ Install 4 apps:
 
 Windows:
 Put OpenGL libraries into 'C:/Opengl' directory
-All needed libs: 
+All needed libs:  http://s000.tinyupload.com/index.php?file_id=94860923931774732633
