@@ -52,7 +52,8 @@ namespace MeshIS {
                 ratio = inscribedCircleRadius / exscribedCircleRadius;
                 sum += ratio;
                 if (ratio < 0.25) { //push condition
-                    MS.t3.push_back(element);
+				
+                    this->t3.push_back(element);
                 }
 
 

@@ -1,9 +1,9 @@
 #ifndef StatisticsDisplayer_H_
 #define StatisticsDisplayer_H_
 
-#include "MeshStatistic.h"
-#include <GL\glew.h>
-#include <GL\freeglut.h>
+#include "../Model/Mesh_Statistics/MeshStatistics.h"
+#include <GL/glew.h>
+#include <GL/freeglut.h>
 
 namespace MeshIS
 {
@@ -13,11 +13,11 @@ namespace MeshIS
 		class StatisticsDisplayer
 		{
 		public:
-			StatisticsDisplayer(MeshIS::Model::MeshStatistic);
+			StatisticsDisplayer(MeshIS::Model::MeshStatistics);
 			void displayStatistics();
 
-		private:
-			MeshIS::Model::MeshStatistic stats;
+		
+			MeshIS::Model::MeshStatistics stats;
 			void prepareMeshStats();
 			void * font = GLUT_BITMAP_HELVETICA_12;
 			vector<std::string> statTxts;

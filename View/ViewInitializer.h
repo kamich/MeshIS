@@ -1,8 +1,6 @@
 #ifndef ViewInitializer_H_
 #define ViewInitializer_H_
 
-#include <GL\glew.h>
-#include <GL\freeglut.h>
 #include <functional>
 #include <vector>
 

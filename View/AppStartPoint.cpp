@@ -1,7 +1,9 @@
 #include "ViewInitializer.h"
 #include "StatisticsDisplayer.h"
 #include <string>
-
+#include <iostream>
+#include <GL/glut.h>
+#include <GL/glew.h>
 using namespace MeshIS::View;
 
 vector<function<void()>> renderFunctions;
@@ -11,8 +13,10 @@ void cleanWindow()
 	glClearColor(1.0, 1.0, 1.0, 1.0);
 
 	glClear(GL_COLOR_BUFFER_BIT);
+    gluPerspective(45.0,(double)600 / (double)800, 1.0, 200.0);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	glMatrixMode(GL_MODELVIEW);
+	glMatrixMode(GL_MODELVIEW); //Switch to the drawing perspective
 
 	glLoadIdentity();
 
@@ -24,6 +28,7 @@ void render()
 	cleanWindow();
 	for (auto function : renderFunctions)
 		function();
+
 
 	glFlush();
 	glutSwapBuffers();
@@ -39,11 +44,6 @@ void Reshape(int width, int height)
 
 	glLoadIdentity();
 
-	GLdouble aspect = 1;
-	if (height > 0)
-		aspect = width / (GLdouble)height;
-
-	gluPerspective(fovy, aspect, 1.0, 5.0);
 	render();
 }
 
@@ -58,20 +58,10 @@ int main(int argc, char* argv[])
 	glutDisplayFunc(render);
 	glutReshapeFunc(Reshape);
 
-	GLenum err = glewInit();
-	if (GLEW_OK != err) {
-		return err;
-	}
-
-	Element_T4 el{ 1.0,2.0,3.0,4.0 };
-	Element_P6 el2{ 1.0,2.0,3.0,4.0,5.0,6.0 };
-	Element_P6 el3{ 1.0,2.0,3.0,4.0,5.0,6.0 };
-
 	CMR mesh;
-	mesh.elementsT4.push_back(el);
-	mesh.elementsP6.push_back(el2);
-	mesh.elementsP6.push_back(el3);
-	MeshIS::Model::MeshStatistic meshStats(mesh);
+
+	MeshIS::Model::MeshStatistics meshStats(mesh);
+    meshStats.processT3Elements();
 	StatisticsDisplayer stats(meshStats);
 	ViewInitializer view;
 
