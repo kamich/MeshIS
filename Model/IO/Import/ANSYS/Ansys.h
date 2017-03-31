@@ -1,12 +1,10 @@
 
-#ifndef MESHIS_MASTER_ANSYS_H
-#define MESHIS_MASTER_ANSYS_H
 
 #include <iostream>
 #include <fstream>
-#include "../MeshImporter.h"
+#include "MeshImporter.h"
 using  namespace std;
-class Ansys :public MeshIS::Model::Import::MeshImporter {
+class Ansys :public MeshImporter {
 private:
     int sizeNode,sizeElement;
     Point3D *tabNode;
@@ -31,4 +29,3 @@ class Point5D
 public:
     int a,b,c,d,e;
 };
-#endif //MESHIS_MASTER_ANSYS_H

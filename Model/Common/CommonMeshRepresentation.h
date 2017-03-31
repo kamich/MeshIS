@@ -1,6 +1,3 @@
-#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
-#define MESHIS_COMMON_MESH_REPRESENTATION_H_
-
 /**
  * @file Common mesh representation class.
  * Used for interfacing different components of code and passing informations about meshes.
@@ -50,4 +47,4 @@ namespace Common
 } //! end of namespace MeshIS
 
 
-#endif /* end of include guard: MESHIS_COMMON_MESH_REPRESENTATION_H_ */
+
