@@ -109,6 +109,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Exit</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
