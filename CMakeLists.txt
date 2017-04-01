@@ -13,11 +13,16 @@ set(CUSTOM_HDR
         ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/FileManager.h
         ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/IO_Exceptions.h
         ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/NastranFileType.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/Model/nastran_transform.h )
+        ${CMAKE_CURRENT_SOURCE_DIR}/Model/nastran_transform.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/Import/NastranParser.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/Import/BdfParser.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/Model/IO/Import/NasParser.h )
 
 set(SOURCE_FILES 
         MeshIS/Source.cpp
         MeshIS/Model/IO/Import/NastranMeshImporter.cpp
+        MeshIS/Model/IO/Import/NasParser.cpp
+        MeshIS/Model/IO/Import/BdfParser.cpp
         MeshIS/Model/IO/FileManager.cpp )
 
 find_package( Boost 1.63 COMPONENTS system filesystem REQUIRED)
