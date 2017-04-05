@@ -1,6 +1,5 @@
 #include "ParaviewVTKXMLexporter.h"
 #include <iostream>
-#include <fstream>
 
 
 namespace MeshIS
@@ -17,53 +16,50 @@ namespace MeshIS
 			void ParaviewVTKXMLExporter::Export(const std::string& absolute_file_path, const CMR& mesh_data)
 			{
 				checkFileToSave(absolute_file_path);
-				std::fstream* fileStream = buildFstreamAndOpenFile(absolute_file_path);
+				fileStream.open(absolute_file_path, std::ios::out | std::ios::trunc);
 				
-				/*========================================
-						Export starts here
-				=======================================*/
+				if(!fileStream.good()){
+					std::cout << "Error while opening file.\nEnter will close program." << std::endl;
+					std::cin.get();
+					fileStream.close();
+					exit(0);
+				}
 				const unsigned int noOfCells = mesh_data.elementsT4.size() + mesh_data.elementsP6.size();
 
-				*fileStream << "<VTKFile type=\"UnstructuredGrid\" version=\"1.0\" byte_order=\"LittleEndian\" header_type=\"UInt64\">" << std::endl;
-				*fileStream << "<UnstructuredGrid>" << std::endl;
-				*fileStream << "<Piece NumberOfPoints=\"" << mesh_data.vertices.size() << "\" NumberOfCells=\"" << noOfCells << "\">" << std::endl;
-				*fileStream << "<PointData>" << std::endl;
-				*fileStream << "</PointData>" << std::endl;
-				*fileStream << "<CellData>" << std::endl;
-				*fileStream << "</CellData>" << std::endl;
-				*fileStream << "<Points>" << std::endl;
-				*fileStream << "<DataArray type=\"Float64\" Name=\"Points\" NumberOfComponents=\"3\" format=\"ascii\">" << std::endl;
+				fileStream << "<VTKFile type=\"UnstructuredGrid\" version=\"1.0\" byte_order=\"LittleEndian\" header_type=\"UInt64\">" << std::endl;
+				fileStream << "<UnstructuredGrid>" << std::endl;
+				fileStream << "<Piece NumberOfPoints=\"" << mesh_data.vertices.size() << "\" NumberOfCells=\"" << noOfCells << "\">" << std::endl;
+				fileStream << "<PointData>" << std::endl;
+				fileStream << "</PointData>" << std::endl;
+				fileStream << "<CellData>" << std::endl;
+				fileStream << "</CellData>" << std::endl;
+				fileStream << "<Points>" << std::endl;
+				fileStream << "<DataArray type=\"Float64\" Name=\"Points\" NumberOfComponents=\"3\" format=\"ascii\">" << std::endl;
 
-				putVerticesTofile(mesh_data, fileStream);
+				putVerticesTofile(mesh_data);
 
-				*fileStream << std::endl << "</DataArray>" << std::endl;
-				*fileStream << "</Points>" << std::endl;
-				*fileStream << "<Cells>" << std::endl;
-				*fileStream << "<DataArray type=\"Int64\" Name=\"connectivity\" format=\"ascii\">" << std::endl;
+				fileStream << std::endl << "</DataArray>" << std::endl;
+				fileStream << "</Points>" << std::endl;
+				fileStream << "<Cells>" << std::endl;
+				fileStream << "<DataArray type=\"Int64\" Name=\"connectivity\" format=\"ascii\">" << std::endl;
 
-				putConnectivityTofile(fileStream);
+				putConnectivityTofile(mesh_data);
 
-				*fileStream << "</DataArray>" << std::endl;
-				*fileStream << "<DataArray type=\"UInt8\" Name=\"types\" format=\"ascii\">" << std::endl;
+				fileStream << "</DataArray>" << std::endl;
+				fileStream << "<DataArray type=\"UInt8\" Name=\"types\" format=\"ascii\">" << std::endl;
 				
-				putTypesTofile(mesh_data,fileStream);
+				putTypesTofile(mesh_data);
 
-				*fileStream << std::endl << "</DataArray>" << std::endl;
-				*fileStream << "</Cells>" << std::endl;
-				*fileStream << "</Piece>" << std::endl;
-				*fileStream << "</UnstructuredGrid>" << std::endl;
-				*fileStream << "</VTKFile>" << std::endl;
+				fileStream << std::endl << "</DataArray>" << std::endl;
+				fileStream << "</Cells>" << std::endl;
+				fileStream << "</Piece>" << std::endl;
+				fileStream << "</UnstructuredGrid>" << std::endl;
+				fileStream << "</VTKFile>" << std::endl;
 				
-				fileStream->close();
+				fileStream.close();
 
 				std::cout << "Export Completed!" << std::endl;
 
-			}
-			void ParaviewVTKXMLExporter::setConnectivitiesT4(const vector<Element_T4>  connectivitiesT4){
-				this->connectivitiesT4 = connectivitiesT4;
-			}
-			void ParaviewVTKXMLExporter::setConnectivitiesP6(const vector<Element_P6>  connectivitiesP6){
-				this->connectivitiesP6 = connectivitiesP6;
 			}
 			void ParaviewVTKXMLExporter::checkFileToSave(const string& absolute_file_path) {	
 				const char extension[4] = { absolute_file_path[absolute_file_path.size() - 4],
@@ -78,97 +74,74 @@ namespace MeshIS
 					exit(0);
 				}
 			}
-			void ParaviewVTKXMLExporter::putVerticesTofile(CMR mesh_data, std::fstream *fileStream) {
+			void ParaviewVTKXMLExporter::putVerticesTofile(const CMR& mesh_data) {
 				if (mesh_data.vertices.size() > 1)
 				{
 					for (unsigned int i = 1; i < mesh_data.vertices.size() + 1; i++) {
 
-						*fileStream << mesh_data.vertices[i - 1].at(0) << " "
+						fileStream << mesh_data.vertices[i - 1].at(0) << " "
 							<< mesh_data.vertices[i - 1].at(1) << " "
 							<< mesh_data.vertices[i - 1].at(2) << " ";
 						if (i % 2 == 0) {
-							*fileStream << std::endl;
+							fileStream << std::endl;
 						}
 					};
 				}
 			}
-			void ParaviewVTKXMLExporter::putConnectivityTofile(std::fstream *fileStream) {
-				if (connectivitiesT4.size() > 1)
-				{
-					for (unsigned int i = 0; i < connectivitiesT4.size() - 1; i++) {
+			void ParaviewVTKXMLExporter::putConnectivityTofile(const CMR& mesh_data) {
+				if (mesh_data.elementsT4.size() > 1){
+					for (unsigned int i = 0; i < mesh_data.elementsT4.size() - 1; i++) {
 						if (i % 2 == 0) {
-							*fileStream << connectivitiesT4[i].at(0) << " "
-								<< connectivitiesT4[i].at(1) << " "
-								<< connectivitiesT4[i].at(2) << " "
-								<< connectivitiesT4[i].at(3) << " "
-								<< connectivitiesT4[i + 1].at(0) << " "
-								<< connectivitiesT4[i + 1].at(1) << std::endl;
+							fileStream << mesh_data.elementsT4[i].at(0) << " "
+								<< mesh_data.elementsT4[i].at(1) << " "
+								<< mesh_data.elementsT4[i].at(2) << " "
+								<< mesh_data.elementsT4[i].at(3) << " "
+								<< mesh_data.elementsT4[i + 1].at(0) << " "
+								<< mesh_data.elementsT4[i + 1].at(1) << std::endl;
 						}
 						else {
-							*fileStream << connectivitiesT4[i].at(0) << " "
-								<< connectivitiesT4[i].at(1) << " "
-								<< connectivitiesT4[i + 1].at(0) << " "
-								<< connectivitiesT4[i + 1].at(1) << " "
-								<< connectivitiesT4[i + 1].at(2) << " "
-								<< connectivitiesT4[i + 1].at(3) << std::endl;
+							fileStream << mesh_data.elementsT4[i].at(0) << " "
+								<< mesh_data.elementsT4[i].at(1) << " "
+								<< mesh_data.elementsT4[i + 1].at(0) << " "
+								<< mesh_data.elementsT4[i + 1].at(1) << " "
+								<< mesh_data.elementsT4[i + 1].at(2) << " "
+								<< mesh_data.elementsT4[i + 1].at(3) << std::endl;
 
 						}
 
 					};
 				}
-
-				if (connectivitiesP6.size() > 0) {
-					for (unsigned int i = 0; i < connectivitiesP6.size(); i++) {
+				
+				if (mesh_data.elementsP6.size() > 0) {
+					for (unsigned int i = 0; i < mesh_data.elementsP6.size(); i++) {
 						for (unsigned int j = 0; j < 5; j++) {
-							*fileStream << connectivitiesP6[i].at(j) << " ";
+							fileStream << mesh_data.elementsP6[i].at(j) << " ";
 						}
-						*fileStream << connectivitiesP6[i].at(5) << std::endl;
+						fileStream << mesh_data.elementsP6[i].at(5) << std::endl;
 
 					};
 				}
 			}
-			void ParaviewVTKXMLExporter::putTypesTofile(CMR mesh_data, std::fstream *fileStream) {
-
-				/*========================================
-					VTK_TETRA - 4POINT FIGURE
-				=======================================*/
+			void ParaviewVTKXMLExporter::putTypesTofile(const CMR& mesh_data) {
 				if (mesh_data.elementsT4.size() > 0) {
 					for (unsigned int i = 1; i < mesh_data.elementsT4.size() + 1; i++) {
-						*fileStream << "10" << " ";
+						fileStream << "10" << " ";
 						if (i % 6 == 0) {
-							*fileStream << std::endl;
+							fileStream << std::endl;
 						}
 					}
 				}
-				/*========================================
-					VTK_WEDGE - 6POINT FIGURE
-				=======================================*/
 				if (mesh_data.elementsP6.size() > 0) {
 					for (unsigned int i = 1; i < mesh_data.elementsP6.size() + 1; i++) {
-						*fileStream << "13" << " ";
+						fileStream << "13" << " ";
 						if (i % 6 == 0) {
-							*fileStream << std::endl;
+							fileStream << std::endl;
 						}
 					}
 
 				}
 			}
-			std::fstream* ParaviewVTKXMLExporter::buildFstreamAndOpenFile(const std::string absolute_file_path) {
-				
-				std::fstream *fileStream = new std::fstream(absolute_file_path);
-				fileStream->open(absolute_file_path, std::ios::out |std::ios::trunc);
-				fileStream->close();				
-				fileStream->flush();
-				fileStream->open(absolute_file_path, std::ios::out);
 
-				if (!fileStream->good()) {
-					std::cout << "Error while opening file.\nEnter will close program." << std::endl;
-					std::cin.get();
-					fileStream->close();
-					exit(0);
-				}
-				return fileStream;
-			}
 			}
 	}
 }

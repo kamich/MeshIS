@@ -1,4 +1,4 @@
-#pragma
+#pragma once
 #ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 

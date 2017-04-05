@@ -9,12 +9,12 @@ namespace MeshIS
     {
         namespace CMR
         {
-            using MeshIS::Common::CMR;
+            using MeshIS::Model::Common::CMR;
 
             CMR create_plate20x20()
       	    {
                 CMR plate20x20;
-                plate20x20.vertices = {{0,0,0}
+                plate20x20.vertices = {{0,0,0},
                 {0.000000, 0.000000, 0.000000},
                 {0.500000, 0.000000, 0.000000},
                 {1.000000, 0.000000, 0.000000},
