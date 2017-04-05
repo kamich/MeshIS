@@ -1,4 +1,4 @@
-#pragma once
+
 //
 // Created by Lukasz on 27.03.2017.
 //
@@ -8,7 +8,6 @@
 
 #include "../../../Common/CommonMeshRepresentation.h"
 
-#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <math.h>
