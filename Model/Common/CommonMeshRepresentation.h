@@ -1,4 +1,5 @@
-#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
+#pragma 
+#ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
 /**
@@ -25,12 +26,15 @@ namespace Common
     typedef array<double,3> Vertex;
     typedef int             VertexID;
 
-    typedef int               ElementID;
+    typedef int             ElementID;
 
     // Element is defined as 4 vertices:
     // no need for such simple class either.
-    typedef array<VertexID,4> Element_T4;	//< Tetrahedral element with 4 vertices.
-    typedef array<VertexID,6> Element_P6;	//< Prismatic elements with 6 vertices.
+	typedef array<VertexID, 2> Element_L2;//Line
+	typedef array<VertexID, 3> Element_T3; //< Triangular face element with 3 vertices.
+	typedef array<VertexID, 4> Element_Q4; //< Quadrilateral face element with 4 vertices.
+	typedef array<VertexID, 4> Element_T4;	//< Tetrahedral element with 4 vertices.
+	typedef array<VertexID, 6> Element_P6;	//< Prismatic elements with 6 vertices.
 
     class CommonMeshRepresentation
     {
@@ -40,7 +44,8 @@ namespace Common
 
         vector<Vertex>      vertices;
         vector<Element_T4>     elementsT4;
-	vector<Element_P6>     elementsP6;
+		vector<Element_T3>     elements34;
+		vector<Element_P6>     elementsP6;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
