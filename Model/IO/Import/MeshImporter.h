@@ -1,5 +1,3 @@
-#pragma #ifndef MESHIS_MESH_IMPORTER_H_
-#define MESHIS_MESH_IMPORTER_H_
 
 #include <string>
 #include "CommonMeshRepresentation.h"
@@ -24,4 +22,4 @@ namespace Import
 }//! end of namespace Model
 }//! end of namespace MeshIS
 
-#endif /* end of include guard: MESHIS_MESH_IMPORTER_H_ */
+

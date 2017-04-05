@@ -2,7 +2,7 @@
 #define MESHIS_MESH_EXPORTER_H_
 
 #include <string>
-#include "CommonMeshRepresentation.h"
+#include <"C"
 
 using std::string;
 
@@ -23,5 +23,3 @@ namespace Export
 }//! end of namespace Export
 }//! end of namespace Model
 }//! end of namespace MeshIS
-
-#endif /* end of include guard: MESHIS_MESH_EXPORTER_H_ */
