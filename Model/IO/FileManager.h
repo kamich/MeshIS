@@ -1,4 +1,3 @@
-#pragma 
 #ifndef FILEMANAGER_H_
 #define FILEMANAGER_H_
 
@@ -6,12 +5,9 @@
 #include <sstream>
 #include <vector>
 #include <string>
-#include <algorithm>
 #include <boost/filesystem.hpp>
-#include "IO_Exceptions.h"
 
 using std::vector;
-using std::array;
 using std::string;
 using std::ifstream;
 using std::stringstream;

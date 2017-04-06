@@ -1,4 +1,3 @@
-#pragma
 #ifndef NASTRAN_PARSER_H_
 #define NASTRAN_PARSER_H_
 

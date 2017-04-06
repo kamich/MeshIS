@@ -1,12 +1,9 @@
-#pragma
 #ifndef BDF_PARSER_H_
 #define BDF_PARSER_H_
 
 #include <vector>
 #include <array>
-#include <sstream>
 #include "NastranParser.h"
-#include "../../nastran_transform.h"
 
 class BdfParser :
     public NastranParser

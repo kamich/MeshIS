@@ -1,5 +1,7 @@
 #include "NastranMeshImporter.h"
 
+#include "../FileManager.h"
+
 using MeshIS::Model::Common::CMR;
 using MeshIS::Model::Common::Vertex;
 using MeshIS::Model::Common::VertexID;

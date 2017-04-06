@@ -1,4 +1,3 @@
-#pragma
 #ifndef NASTRAN_TRANSFORM_H_
 #define NASTRAN_TRANSFORM_H_
 

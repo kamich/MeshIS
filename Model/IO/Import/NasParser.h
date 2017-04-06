@@ -1,12 +1,9 @@
-#pragma
 #ifndef NAS_PARSER_H_
 #define NAS_PARSER_H_
 
 #include <vector>
 #include <array>
-#include <sstream>
 #include "NastranParser.h"
-#include "../../nastran_transform.h"
 
 class NasParser :
     public NastranParser

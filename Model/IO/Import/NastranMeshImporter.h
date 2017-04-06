@@ -1,17 +1,11 @@
-#pragma 
 #ifndef NASTRAN_MESH_IMPORTER_H_
 #define NASTRAN_MESH_IMPORTER_H_
 
-#include <vector>
-#include <array>
-#include <sstream>
 #include <memory>
 #include "BdfParser.h"
 #include "NasParser.h"
 #include "MeshImporter.h"
 #include "../NastranFileType.h"
-#include "../FileManager.h"
-#include "../../nastran_transform.h"
 #include "../../Common/CommonMeshRepresentation.h"
 
 using MeshIS::Model::Common::CMR;

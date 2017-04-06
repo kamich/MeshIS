@@ -1,5 +1,8 @@
 #include "FileManager.h"
 
+#include <algorithm>
+#include "IO_Exceptions.h"
+
 namespace IO = MeshIS::Model::IO;
 
 bool IO::FileManager::file_exists(path & file_path)
