@@ -1,4 +1,4 @@
-#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
+#ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
 /**
@@ -10,6 +10,7 @@
 
 #include <vector>
 #include <array>
+#include <string>
 
 using std::vector;
 using std::array;
@@ -24,7 +25,6 @@ namespace Common
     // no need for such simple class.
     typedef array<double,3> Vertex;
     typedef int             VertexID;
-
     typedef int               ElementID;
 
     // Element is defined as 4 vertices:
@@ -40,7 +40,8 @@ namespace Common
 
         vector<Vertex>      vertices;
         vector<Element_T4>     elementsT4;
-	vector<Element_P6>     elementsP6;
+		vector<Element_P6>     elementsP6;
+		vector<std::string>		surfaceVector;
     };
 
     typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
