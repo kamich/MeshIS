@@ -26,7 +26,6 @@ namespace Import
 
         CMR parse(stringstream& stream);
         void shrink_to_fit_containers(CMR & mesh);
-
     public:
         virtual CMR   Import(const string & absolute_file_path);
         NastranMeshImporter(NastranFileType file_type);

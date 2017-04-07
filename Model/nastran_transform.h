@@ -12,19 +12,18 @@ using std::begin;
 using std::end;
 using std::string;
 
-namespace chrom 
-{
+namespace chrom {
     template<class T>
     T decrement(T x) {
         return --x;
     }
 
     template<class T, size_t size>
-    void decrement_values(array<T, size> & arr) {
+    void decrement_values(array<T, size> &arr) {
         transform(begin(arr), end(arr), begin(arr), &chrom::decrement<T>);
     }
-	
-	inline void erase_all_spaces(string & field) {
+
+    inline void erase_all_spaces(string &field) {
         field.erase(remove_if(field.begin(), field.end(), [](char ch) {
             return std::isspace<char>(ch, std::locale::classic());
         }), field.end());

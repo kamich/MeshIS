@@ -13,11 +13,10 @@ using boost::filesystem::path;
 using std::getline;
 using std::move;
 
-CMR MeshIS::Model::Import::NastranMeshImporter::parse(stringstream & stream)
-{
+CMR MeshIS::Model::Import::NastranMeshImporter::parse(stringstream &stream) {
     CMR mesh;
     {
-        string  temp;
+        string temp;
         while (getline(stream, temp)) {
             stringstream cache_sstream(temp);
             char token_buffer[COLUMN_LENGTH] = {};
@@ -36,8 +35,7 @@ CMR MeshIS::Model::Import::NastranMeshImporter::parse(stringstream & stream)
     return move(mesh);
 }
 
-void MeshIS::Model::Import::NastranMeshImporter::shrink_to_fit_containers(CMR & mesh)
-{
+void MeshIS::Model::Import::NastranMeshImporter::shrink_to_fit_containers(CMR &mesh) {
     mesh.elementsP6.shrink_to_fit();
     mesh.elementsQ4.shrink_to_fit();
     mesh.elementsT3.shrink_to_fit();
@@ -45,25 +43,22 @@ void MeshIS::Model::Import::NastranMeshImporter::shrink_to_fit_containers(CMR & 
     mesh.vertices.shrink_to_fit();
 }
 
-CMR MeshIS::Model::Import::NastranMeshImporter::Import(const string & absolute_file_path)
-{
+CMR MeshIS::Model::Import::NastranMeshImporter::Import(const string &absolute_file_path) {
     path file_path(absolute_file_path);
-    IO::FileManager manager({ ".nas", ".bdf" });
+    IO::FileManager manager({".nas", ".bdf"});
     auto file = manager.open_file(file_path);
     auto mapped_file = IO::FileManager::map_file_to_stringstream(file);
 
     return parse(mapped_file);
 }
 
-MeshIS::Model::Import::NastranMeshImporter::NastranMeshImporter(NastranFileType file_type)
-{
+MeshIS::Model::Import::NastranMeshImporter::NastranMeshImporter(NastranFileType file_type) {
 
-    switch (file_type)
-    {
-    case NastranFileType::BDF:
-        parser = std::make_unique<BdfParser>();
-        break;
-    default:
-        parser = std::make_unique<NasParser>();
+    switch (file_type) {
+        case NastranFileType::BDF:
+            parser = std::make_unique<BdfParser>();
+            break;
+        default:
+            parser = std::make_unique<NasParser>();
     }
 }
