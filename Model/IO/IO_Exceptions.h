@@ -1,4 +1,4 @@
-#pragma #ifndef MESHIS_IO_EXCEPTIONS_H_
+#ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 
 #include <stdexcept>

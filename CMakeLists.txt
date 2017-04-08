@@ -34,13 +34,10 @@ INCLUDE_DIRECTORIES(
 SET (${this_target}_SOURCE_FILES
     MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cpp
 	MeshIS/Model/Common/CommonMeshRepresentation.cpp
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppFreeBulkData.cpp
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppLongBulkData.cpp
 	MeshIS/Model/IO/Export/Nastran/main.cpp
 	MeshIS/Model/IO/Export/MeshExporter.cpp
 	MeshIS/Model/IO/Export/Nastran/NastranExporter/NastranExporter.cpp
 	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppShortBulkData.cpp
-	MeshIS/Model/IO/Export/Nastran/TestNastran/TestNastran.cpp
     )
 
 ## section: header files
@@ -48,12 +45,9 @@ SET (${this_target}_SOURCE_FILES
 SET(${this_target}_HEADER_FILES
     MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppBulkData.h
 	MeshIS/Model/Common/CommonMeshRepresentation.h
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppFreeBulkData.h
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppLongBulkData.h
 	MeshIS/Model/IO/Export/MeshExporter.h
 	MeshIS/Model/IO/Export/Nastran/NastranExporter/NastranExporter.h
 	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppShortBulkData.h
-	MeshIS/Model/IO/Export/Nastran/TestNastran/TestNastran.h
     )
 
 SOURCE_GROUP("Source Files" FILES 
