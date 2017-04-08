@@ -27,7 +27,6 @@ namespace MeshIS
 				cerr << "The number of entered arguments (" << argc - 1 << ") is invalid." << endl;
 				cerr << "The correct number of arguments is four:" << endl;
 				cerr << "file_type_to_import file_name_to_import file_type_to_expotr file_name_to_export" << endl;
-				system("pause");
 				exit(1);
 			}
 			SetFilesAndFormatsNamesFromCommandLineArgs(argv);
@@ -47,27 +46,23 @@ namespace MeshIS
 			{
 				cerr << "An error occured: INVALID FILE NAME." << endl;
 				cerr << "The entered file name (" << invalidFileName.get_problematic_filename() << ") is incorrect." << endl;
-				system("pause");
 				exit(1);
 			}
 			catch (MeshIS::Model::IO::FileNotExistException& fileNotExist)
 			{
 				cerr << "An error occured: FILE NOT EXIST." << endl;
 				cerr << "The file with the given name (" << fileNotExist.get_problematic_filename() << ") does not exist." << endl;
-				system("pause");
 				exit(1);
 			}
 			catch (MeshIS::Model::IO::IncorrectFileFormatException& incorrectFileFormat)
 			{
 				cerr << "An error occured: INCORRECT FILE FORMAT." << endl;
 				cerr << "The format of the data in the file (" << incorrectFileFormat.get_problematic_filename() << ") does not match the selected format for conversion." << endl;
-				system("pause");
 				exit(1);
 			}
 			catch (...)
 			{
 				cerr << "An error occured." << endl;
-				system("pause");
 				exit(1);
 			}
 		}
@@ -94,7 +89,6 @@ namespace MeshIS
 			else
 			{
 				cerr << "The selected format to import (" << importFormat << ") is not supported." << endl;
-				system("pause");
 				exit(1);
 			}
 		}
@@ -107,7 +101,6 @@ namespace MeshIS
 			else
 			{
 				cerr << "The selected format to export (" << exportFormat << ") is not supported." << endl;
-				system("pause");
 				exit(1);
 			}
 		}
