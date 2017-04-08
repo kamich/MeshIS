@@ -34,11 +34,11 @@ namespace Import
 			if (marker == "POINTS")
 			{
 				int vertex_amount;
-				double x, y, z;
 				vtk_legacy_file >> vertex_amount;
 				std::getline(vtk_legacy_file, marker); // just to move to the next line
 				for (size_t i = 0; i < vertex_amount; ++i)
 				{
+					double x, y, z;
 					vtk_legacy_file >> x;
 					vtk_legacy_file >> y;
 					vtk_legacy_file >> z;
@@ -47,11 +47,11 @@ namespace Import
 			}
 			if (marker == "CELLS")
 			{
-				int points;
 				vtk_legacy_file >> elements_amount;
 				std::getline(vtk_legacy_file, marker); // just to move to the next line
 				for (size_t i = 0; i < elements_amount; ++i)
 				{
+					int points;
 					vtk_legacy_file >> points;
 					std::vector<int> element;
 					int point;
@@ -66,9 +66,9 @@ namespace Import
 			if (marker == "CELL_TYPES")
 			{
 				vtk_legacy_file >> elements_amount;
-				int element_type;
 				for (int i = 0; i < elements_amount; ++i)
 				{
+					int element_type;
 					std::vector<int>& p = temp_elements[i];
 					vtk_legacy_file >> element_type;
 					addElementToCMR(element_type, p);	
@@ -82,11 +82,11 @@ namespace Import
 
 	void PVTKLImporter::addElementToCMR(int element_type, std::vector<int>& p)
 	{
-		if (element_type == 5)
+		if (element_type == ParaviewElementTypes::Triangular)
 			cmr.elementsT3.push_back(Element_T3{ p[0], p[1], p[2] });
-		else if (element_type == 9)
+		else if (element_type == ParaviewElementTypes::Quadrilateral)
 			cmr.elementsQ4.push_back(Element_Q4{ p[0], p[1], p[2], p[3] });
-		else if (element_type == 13)
+		else if (element_type == ParaviewElementTypes::Prismatic)
 			cmr.elementsP6.push_back(Element_P6{ p[0], p[1], p[2], p[3], p[4], p[5] });
 	}
 

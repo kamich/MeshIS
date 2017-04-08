@@ -1,4 +1,3 @@
-#pragma 
 #ifndef MESHIS_PARAVIEW_VTK_LEGACY_IMPORTER_H_
 #define MESHIS_PARAVIEW_VTK_LEGACY_IMPORTER_H_
 #include "MeshImporter.h"
@@ -21,6 +20,13 @@ private:
 	int elements_amount;
 
 	void addElementToCMR(int, std::vector<int>&);
+
+	enum ParaviewElementTypes // not using enum class to avoid strong typing and need of casting
+	{
+		Triangular = 5,
+		Quadrilateral = 9,
+		Prismatic = 13
+	};
 };
 
 typedef  ParaviewVTKLegacyMeshImporter PVTKLImporter;
