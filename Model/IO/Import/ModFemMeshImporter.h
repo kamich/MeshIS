@@ -1,4 +1,3 @@
-#pragma 
 #ifndef MESHIS_ModFEM_IMPORTER_H_
 #define MESHIS_ModFEM_IMPORTER_H_
 
