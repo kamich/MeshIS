@@ -46,13 +46,10 @@ SET (${this_target}_SOURCE_FILES
 ## section: header files
 # Add your header files here(one file per line), please SORT in alphabetical order for future maintenance!
 SET(${this_target}_HEADER_FILES
-    MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppBulkData.h
+    
 	MeshIS/Model/Common/CommonMeshRepresentation.h
 	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppFreeBulkData.h
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppLongBulkData.h
 	MeshIS/Model/IO/Export/MeshExporter.h
-	MeshIS/Model/IO/Export/Nastran/NastranExporter/NastranExporter.h
-	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppShortBulkData.h
 	MeshIS/Model/IO/Export/Nastran/TestNastran/TestNastran.h
     )
 

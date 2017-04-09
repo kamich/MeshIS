@@ -1,19 +1,11 @@
 #include <iostream>
 #include "TestNastran.h"
 
-TestNastran::TestNastran()
-{
-}
-
-
-TestNastran::~TestNastran()
-{
-}
 
 void TestNastran::init_CMR()
 {
     string path;
-    std::cin >> path;  // pobranie nazw plików Ÿród³owego i docelowego
+    std::cin >> path;
     load_CMR_from_file(path);
 }
 

@@ -6,12 +6,6 @@
 #include "../../../../Common/CommonMeshRepresentation.h"
 
 
-FreeBulkData::FreeBulkData() {
-}
-
-
-FreeBulkData::~FreeBulkData() {
-}
 
 string FreeBulkData::get_GRID_line_from_vertex(MeshIS::Model::Common::Vertex vertex, int vertexID) {
     string GRID{ "GRID" };

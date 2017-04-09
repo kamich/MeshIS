@@ -13,13 +13,6 @@ class TestNastran
 {
 private:	MeshIS::Model::Common::CMR cmr;
 
-#pragma region Constructors
-public:		TestNastran();
-#pragma endregion
-
-#pragma region Destructor
-public:		~TestNastran();
-#pragma endregion
 
 #pragma region Print Methods
 public:		void	print_CMR();

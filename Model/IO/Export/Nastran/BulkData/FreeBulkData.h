@@ -11,9 +11,6 @@ using std::string;
 
 class FreeBulkData :public BulkData
 {
-public:
-    FreeBulkData();
-    ~FreeBulkData();
 public:  virtual string get_GRID_line_from_vertex(MeshIS::Model::Common::Vertex vertex
             , int vertexID) override;
 public:  virtual string get_CTETRA_line_from_elementT4(MeshIS::Model::Common::Element_T4 element_t4
