@@ -1,26 +1,12 @@
 #include "Renderer.h"
+#include "CommonMeshRepresentation.h"
 extern GLFWwindow* window;
 
 
-Renderer::Renderer()
+int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 {
-
-}
-
-
-
-Renderer::~Renderer()
-{
-}
-
-int Renderer::loop(CommonMeshRepresentation common_mesh)
-{
-//	VertexLoader pointArray("temp.xyz");
-//	MeshIS::Model::Common::CommonMeshRepresentation common_mesh;
 	int verticesArraySize = common_mesh.vertices.size()*3;
-	const float* arr = commonToArray(common_mesh);
-	//	const float* arr = pointArray.getArray();
-	//	int verticesArraySize = pointArray.getSize();
+	const float* arr = commonToArray(common_mesh).data();
 
 	if (!glfwInit())
 	{
@@ -116,10 +102,10 @@ int Renderer::loop(CommonMeshRepresentation common_mesh)
 	return 0;
 }
 
-float* Renderer::commonToArray(CommonMeshRepresentation data)
+vector<float> Renderer::commonToArray(CommonMeshRepresentation data)
 {
-//	std::vector<float> *array = new std::vector<float>;
-	float* array = new float[data.vertices.size()*3];
+	vector < float > array;
+	array.resize(data.vertices.size() * 3);
 	int i = 0;
 	for (Vertex vertex : data.vertices)
 	{

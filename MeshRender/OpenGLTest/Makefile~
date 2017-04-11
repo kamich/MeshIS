@@ -1,4 +1,0 @@
-INC=-I/home/tobiasz/Desktop/cep/OpenGLTest/packages/GLMathematics.0.9.5.4/build/native/include -I/home/tobiasz/Desktop/cep/OpenGLTest/packages/nupengl.core.0.1.0.1/build/native/include
-
-all:
-	g++ $(INC) -L/usr/lib/x86_64-linux-gnu main.cpp -lGL -lGLU -lglut -lglfw -lX11 -lXxf86vm -lXrandr -lpthread -lXi -o main

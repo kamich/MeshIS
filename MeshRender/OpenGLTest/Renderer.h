@@ -28,10 +28,10 @@ class Renderer
 {
 public:
 
-	Renderer();
-	~Renderer();
+	Renderer() = default;
+	~Renderer() = default;
 	int loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh);
 private:
-	float* commonToArray(CommonMeshRepresentation data);
+	vector<float> commonToArray(MeshIS::Model::Common::CommonMeshRepresentation data);
 };
 
