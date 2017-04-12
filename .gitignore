@@ -29,3 +29,5 @@
 *.app
 .vs
 Debug
+bulid
+/ConsoleApplicationForConversion/*.json
