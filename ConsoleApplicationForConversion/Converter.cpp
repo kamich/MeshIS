@@ -3,8 +3,6 @@
 #include "Converter.h"
 #include <boost/filesystem.hpp>
 
-using std::cerr;
-
 namespace MeshIS
 {
 	namespace ConsoleApplicationForConversion
@@ -14,10 +12,10 @@ namespace MeshIS
 			importer = nullptr;
 			exporter = nullptr;
 		}
-		Converter::Converter(Tests::TestImporter importer, Tests::TestExporter exporter)
+		Converter::Converter(Tests::TestImporter &importer, Tests::TestExporter &exporter)
 		{
-			this->importer.reset(new Tests::TestImporter(importer));
-			this->exporter.reset(new Tests::TestExporter(exporter));
+			this->importer = make_unique<Tests::TestImporter>(importer);
+			this->exporter = make_unique<Tests::TestExporter>(exporter);
 		}
 
 		void Converter::Convert(int argc, char** argv)

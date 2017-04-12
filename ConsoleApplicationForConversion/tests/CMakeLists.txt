@@ -13,4 +13,5 @@ set( CTR_SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/TestExporter.cpp
 				${CMAKE_CURRENT_SOURCE_DIR}/ConversionTest.cpp
 				${CMAKE_CURRENT_SOURCE_DIR}/../main.cpp 
 				${CMAKE_CURRENT_SOURCE_DIR}/../Converter.cpp)
+
 add_executable(Tests ${CTR_SOURCE} )

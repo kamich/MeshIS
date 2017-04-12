@@ -1,6 +1,5 @@
 // Created by maria
 
-#pragma 
 #ifndef CONVERTER_H_
 #define CONVERTER_H_
 
@@ -10,10 +9,10 @@
 #include "Tests/TestImporter.h"
 #include "Tests/TestExporter.h"
 
-using std::string;
 using MeshIS::Model::Import::MeshImporter;
 using MeshIS::Model::Export::MeshExporter;
 using MeshIS::Model::Common::CMR;
+using namespace std;
 
 namespace MeshIS
 {
@@ -26,11 +25,11 @@ namespace MeshIS
 		{
 		private:
 			string importFormat, importFileName, exportFormat, exportFileName;
-			std::unique_ptr<MeshImporter> importer;
-			std::unique_ptr<MeshExporter> exporter;
+			unique_ptr<MeshImporter> importer;
+			unique_ptr<MeshExporter> exporter;
 
 		public:
-			Converter(Tests::TestImporter importer, Tests::TestExporter exporter);
+			Converter(Tests::TestImporter &importer, Tests::TestExporter &exporter);
 			Converter();
 			void Convert(int amountOfArgs, char** argv);
 

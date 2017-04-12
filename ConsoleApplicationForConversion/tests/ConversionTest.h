@@ -1,6 +1,5 @@
 // Created by maria
 
-#pragma 
 #ifndef CONVERTERSION_TEST_H_
 #define CONVERTERSION_TEST_H_
 

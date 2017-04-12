@@ -1,6 +1,7 @@
 // Created by maria
 
 #include "TestExporter.h"
+using namespace std;
 
 namespace MeshIS
 {

@@ -1,11 +1,13 @@
 // Created by maria
 
 #include "TestImporter.h"
+using namespace std;
 
 namespace MeshIS
 {
 	namespace ConsoleApplicationForConversion
 	{
+
 		namespace Tests
 		{
 			TestImporter::TestImporter()

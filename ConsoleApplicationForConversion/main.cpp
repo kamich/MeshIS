@@ -45,7 +45,6 @@ int main(int argc, char** argv)
 
 	Converter converter;
 	converter.Convert(argc, argv);
-
-	system("pause");
+	
 	return 0;
 }

@@ -7,11 +7,10 @@ set( BOOST_ROOT "C:/Boost")
 set( Boost_INCLUDE_DIR "C:/Boost/include/boost-1_63")
 set( Boost_LIBRARY_DIR "C:/Boost/lib")
 find_package(Boost 1.63 COMPONENTS system filesystem REQUIRED)
-message(status "** Boost Include: ${Boost_INCLUDE_DIR}")
-message(status "** Boost Libraries: ${Boost_LIBRARY_DIRS}")
-message(status "** Boost Libraries: ${Boost_LIBRARIES}")
+#message(status "** Boost Include: ${Boost_INCLUDE_DIR}")
+#message(status "** Boost Libraries: ${Boost_LIBRARY_DIRS}")
+#message(status "** Boost Libraries: ${Boost_LIBRARIES}")
 
- 
 set(CUSTOM_HDR
 	${CMAKE_CURRENT_SOURCE_DIR}/../Model/Common/CommonMeshRepresentation.h		
 	${CMAKE_CURRENT_SOURCE_DIR}/../Model/IO/Export/MeshExporter.h		
