@@ -1,4 +1,0 @@
-*HEADING
-ABAQUS input deck
-**         Nodes
-*NODE, NSET=NALL
