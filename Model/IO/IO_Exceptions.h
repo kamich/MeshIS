@@ -1,4 +1,3 @@
-#pragma 
 #ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 
@@ -18,6 +17,7 @@ namespace MeshIS
 			/// For exceptions involving some file.
 			class FileException : public std::runtime_error {
 			public:
+
 				FileException(const string& file_name)
 					: runtime_error("Problem with file:" + file_name), problematic_file_name(file_name)
 				{}
@@ -43,7 +43,9 @@ namespace MeshIS
 			class FileNotExistException : public FileException {
 			public:
 				FileNotExistException(const string& file_name)
-					: FileException(file_name)
+
+					:FileException(file_name)
+
 				{}
 			};
 
@@ -57,6 +59,8 @@ namespace MeshIS
 
 		} //! end of namespace IO
 	} //! end of namespace Model
+
 } //! end of namespace MeshIS
 
 #endif /* end of include guard: MESHIS_IO_EXCEPTIONS_H_ */
+
