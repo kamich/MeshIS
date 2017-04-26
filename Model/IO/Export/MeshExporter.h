@@ -1,10 +1,11 @@
+
 #pragma 
 #ifndef MESHIS_MESH_EXPORTER_H_
 #define MESHIS_MESH_EXPORTER_H_
 
-#include <string>
-#include "CommonMeshRepresentation.h"
 
+#include <string>
+#include "../../Common/CommonMeshRepresentation.h"
 using std::string;
 
 namespace MeshIS
@@ -13,6 +14,7 @@ namespace MeshIS
 	{
 		namespace Export
 		{
+
 
 			/// Abstract class for all importing classes.
 			class MeshExporter {

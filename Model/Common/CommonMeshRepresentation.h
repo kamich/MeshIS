@@ -17,6 +17,7 @@ using std::array;
 
 namespace MeshIS
 {
+
 	namespace Model
 	{
 		namespace Common
