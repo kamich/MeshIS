@@ -1,3 +1,4 @@
+
 #ifndef MESHIS_IO_EXCEPTIONS_H_
 #define MESHIS_IO_EXCEPTIONS_H_
 
@@ -12,7 +13,6 @@ namespace MeshIS
 	{
 		namespace IO
 		{
-
 
 			/// For exceptions involving some file.
 			class FileException : public std::runtime_error {
@@ -39,26 +39,26 @@ namespace MeshIS
 				{}
 			};
 
-			/// For the case when file string is correctly formatted, but no such file exist.
-			class FileNotExistException : public FileException {
-			public:
-				FileNotExistException(const string& file_name)
+/// For the case when file string is ill-formatted.
+class InvalidFileNameException : public FileException 
+{
+public:
+	InvalidFileNameException(const string& file_name) : FileException(file_name) {}
+};
 
-					:FileException(file_name)
+/// For the case when file string is correctly formatted, but no such file exist.
+class FileNotExistException : public FileException 
+{
+public:
+	FileNotExistException(const string& file_name) : FileException(file_name) {}
+};
 
-				{}
-			};
-
-			/// For the case, when IO operation encounters a ill-formatted data.
-			class IncorrectFileFormatException : public FileException {
-			public:
-				IncorrectFileFormatException(const string& file_name)
-					: FileException(file_name)
-				{}
-			};
-
-		} //! end of namespace IO
-	} //! end of namespace Model
+/// For the case, when IO operation encounters a ill-formatted data.
+class IncorrectFileFormatException : public FileException 
+{
+public:
+	IncorrectFileFormatException(const string& file_name) : FileException(file_name) {}
+};
 
 } //! end of namespace MeshIS
 

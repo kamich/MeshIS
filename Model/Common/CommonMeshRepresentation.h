@@ -1,4 +1,6 @@
-#pragma 
+
+
+
 #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
@@ -50,6 +52,7 @@ namespace MeshIS
 
 		} //! end of namespace Common
 	} //! end of namespace Model
+
 } //! end of namespace MeshIS
 
 

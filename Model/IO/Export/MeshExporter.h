@@ -1,9 +1,11 @@
-#pragma 
+
+
+
 #ifndef MESHIS_MESH_EXPORTER_H_
 #define MESHIS_MESH_EXPORTER_H_
 
 #include <string>
-#include "CommonMeshRepresentation.h"
+#include "../../Common/CommonMeshRepresentation.h"
 
 using std::string;
 
@@ -14,11 +16,11 @@ namespace MeshIS
 		namespace Export
 		{
 
-			/// Abstract class for all importing classes.
-			class MeshExporter {
-			public:
-				virtual void   Export(const string& absolute_file_path, const Common::CMR& mesh_data) = 0;
-			};
+  /// Abstract class for all importing classes.
+  class MeshExporter {
+    public:
+      virtual void Export(const string& absolute_file_path, const MeshIS::Model::Common::CMR & mesh_data) = 0;
+  };
 
 
 		}//! end of namespace Export

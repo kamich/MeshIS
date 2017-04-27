@@ -27,3 +27,7 @@
 *.exe
 *.out
 *.app
+.vs
+Debug
+bulid
+/ConsoleApplicationForConversion/*.json
