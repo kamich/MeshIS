@@ -15,11 +15,6 @@ RecentlyFiles::RecentlyFiles(QWidget *parent)
 	recFilesMenu();
 }
 
-RecentlyFiles::~RecentlyFiles()
-{
-	
-}
-
 // slots (action)
 
 void RecentlyFiles::open()
