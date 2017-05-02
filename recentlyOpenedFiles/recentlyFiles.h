@@ -11,7 +11,6 @@ class RecentlyFiles : public QMainWindow
 
 public:
 	RecentlyFiles(QWidget *parent = 0);
-	~RecentlyFiles();
 
 private:
 	Ui::HelloQTClass ui;
