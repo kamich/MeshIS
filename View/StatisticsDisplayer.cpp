@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace MeshIS::View;
 
-StatisticsDisplayer::StatisticsDisplayer(MeshIS::Model::MeshStatistics stats)
+StatisticsDisplayer::StatisticsDisplayer(MeshIS::Model::MeshStatistics const & stats)
 {
 	this->stats = stats;
 	prepareMeshStats();

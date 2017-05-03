@@ -9,9 +9,11 @@ PROJECT(MeshIS)
 
 IF(WIN32)
     set(GLUT_INCLUDE_DIR "C:/Opengl/freeglut/include")
-    set(GLUT_glut_LIBRARY "C:/Opengl/freeglut/lib")
+    set(GLUT_glut_LIBRARY "C:/Opengl/freeglut/lib/")
     set(GLEW_INCLUDE_DIR "C:/Opengl/glew-1.11.0/include")
     set(GLEW_LIBRARY "C:/Opengl/Glew and Glut/glew-1.11.0/lib")
+    include_directories("C:/Opengl/freeglut/include" "C:/Opengl/glew-1.11.0/include")
+    link_directories("C:/Opengl/freeglut/lib/" "C:/Opengl/Glew and Glut/glew-1.11.0/lib")
 ENDIF()
 
 #########################################################
@@ -50,16 +52,15 @@ endif(NOT GLEW_FOUND)
 set(Sources
         View/StatisticsDisplayer.h
         View/ViewInitializer.h
+        View/AppStartPoint.h
         View/AppStartPoint.cpp
         View/StatisticsDisplayer.cpp
         View/ViewInitializer.cpp
         Model/Common/CommonMeshRepresentation.h
         Model/Mesh_Statistics/MeshStatistics.cpp
         Model/Mesh_Statistics/MeshStatistics.h
-        external/freeglut.dll
-        external/glew32.dll
         )
-add_executable(View ${Sources})
+add_executable(Mesh ${Sources})
 
-target_link_libraries(View ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
+target_link_libraries(Mesh ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
 

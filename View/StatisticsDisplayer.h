@@ -13,7 +13,7 @@ namespace MeshIS
 		class StatisticsDisplayer
 		{
 		public:
-			StatisticsDisplayer(MeshIS::Model::MeshStatistics);
+			StatisticsDisplayer(MeshIS::Model::MeshStatistics const &);
 			void displayStatistics();
 
 		
