@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# Cmake files
+.idea
+cmake-build-debug
+CmakeFiles
+cmake_install.cmake
