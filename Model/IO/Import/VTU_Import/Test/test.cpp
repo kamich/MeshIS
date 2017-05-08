@@ -14,10 +14,11 @@ public:
 
 
         std::chrono::time_point<std::chrono::system_clock> start, end;
-        start = std::chrono::system_clock::now();
-
         VTU_Import VTU_imporer;
         MeshImporter& importer=VTU_imporer;
+
+        start = std::chrono::system_clock::now();
+
         CMR data=importer.Import("C:\\Users\\Kuba\\CLionProjects\\MeshIS\\Model\\IO\\Import\\VTU_Import\\Test\\test_1.vtu");
 
         end = std::chrono::system_clock::now();
@@ -32,8 +33,6 @@ int main(){
     Test test;
 
     test.import();
-
-    delete &test;
 
 }
 

@@ -1,4 +1,4 @@
-#pragma #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
+#ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
 /**
@@ -29,6 +29,7 @@ namespace Common
 
     // Element is defined as 4 vertices:
     // no need for such simple class either.
+    typedef array<VertexID,3> Element_T3;
     typedef array<VertexID,4> Element_T4;	//< Tetrahedral element with 4 vertices.
     typedef array<VertexID,6> Element_P6;	//< Prismatic elements with 6 vertices.
 
@@ -39,6 +40,7 @@ namespace Common
         // all default constructors etc. will be ok.
 
         vector<Vertex>      vertices;
+        vector<Element_T3>     elementsT3;
         vector<Element_T4>     elementsT4;
 	vector<Element_P6>     elementsP6;
     };

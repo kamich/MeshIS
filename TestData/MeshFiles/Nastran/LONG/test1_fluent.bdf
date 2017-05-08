@@ -1,5 +1,5 @@
 ASSIGN,OUTPUT='D:\Dokum\Projekty\Innogear\2015\Ansys\Test\test1_fluent.op2',UNIT=12
-ID,NASTRAN,D:\Dokum\Projekty\Innogear\2015\Ansys\Test\test1_fluent
+id,NASTRAN,D:\Dokum\Projekty\Innogear\2015\Ansys\Test\test1_fluent
 SOL 101
 TIME 10000
 CEND
