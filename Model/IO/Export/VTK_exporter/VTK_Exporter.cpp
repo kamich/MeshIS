@@ -8,9 +8,9 @@ void VTK_Exporter::exportHeader()
 	VTK_file << "DATASET UNSTRUCTURED_GRID\n";
 }
 
-void VTK_Exporter::exportPoints(const CMR & mesh_data, int numOfPoints)
+void VTK_Exporter::exportPoints(const CMR & mesh_data)
 {
-	VTK_file << "POINTS " << numOfPoints << " double\n";
+	VTK_file << "POINTS " << mesh_data.vertices.size() << " double\n";
 
 	for (int i = 0; i < mesh_data.vertices.size(); i++) {
 		VTK_file << mesh_data.vertices[i][0] << " "
@@ -21,8 +21,10 @@ void VTK_Exporter::exportPoints(const CMR & mesh_data, int numOfPoints)
 	VTK_file << "\n";
 }
 
-void VTK_Exporter::exportCells(const CMR & mesh_data, int numOfElements, int numOfEntries)
+void VTK_Exporter::exportCells(const CMR & mesh_data)
 {
+	int numOfElements = mesh_data.elementsP6.size() + mesh_data.elementsT4.size();
+	int numOfEntries = mesh_data.elementsP6.size() * 7 + mesh_data.elementsT4.size() * 5;
 	VTK_file << "CELLS " << numOfElements << " " << numOfEntries << "\n";
 
 	for (int i = 0; i < mesh_data.elementsT4.size(); i++) {
@@ -42,8 +44,9 @@ void VTK_Exporter::exportCells(const CMR & mesh_data, int numOfElements, int num
 	VTK_file << "\n";
 }
 
-void VTK_Exporter::exportCellTypes(const CMR & mesh_data, int numOfElements)
+void VTK_Exporter::exportCellTypes(const CMR & mesh_data)
 {
+	int numOfElements = mesh_data.elementsP6.size() + mesh_data.elementsT4.size();
 	VTK_file << "CELL_TYPES " << numOfElements << "\n";
 
 	for (int i = 0; i < mesh_data.elementsT4.size(); i++) {
@@ -57,14 +60,11 @@ void VTK_Exporter::exportCellTypes(const CMR & mesh_data, int numOfElements)
 void VTK_Exporter::Export(const string & absolute_file_path, const CMR & mesh_data)
 {
 	VTK_file.open(absolute_file_path, std::ios::out | std::ios::trunc);
-	int i = 0;
-	int numOfElements = mesh_data.elementsP6.size() + mesh_data.elementsT4.size();
-	int numOfEntries = mesh_data.elementsP6.size() * 7 + mesh_data.elementsT4.size() * 5;
 	if (VTK_file.good()) {
 		exportHeader();
-		exportPoints(mesh_data, mesh_data.vertices.size());
-		exportCells(mesh_data, numOfElements, numOfEntries);
-		exportCellTypes(mesh_data, numOfElements);	
+		exportPoints(mesh_data);
+		exportCells(mesh_data);
+		exportCellTypes(mesh_data);	
 	}
 	VTK_file.close();
 }
