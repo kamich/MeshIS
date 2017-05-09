@@ -11,6 +11,7 @@ using MeshIS::Model::Common::VertexID;
 class MeshExport : public MeshIS::Model::Export::MeshExporter {
 public:
 	void Export(const string& absolute_file_path, const CMR & mesh_data);
+private:
 	void addSurface(std::fstream &file, const CMR &mesh_data);
 	void addNodes(std::fstream &file, const CMR &mesh_data);
 	void addElements(std::fstream &file, const CMR &mesh_data);

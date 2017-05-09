@@ -45,6 +45,5 @@ int main() {
 	meshExport.Export("test_export.msh", cmr);
 	std::cout << "Done!" << std::endl << std::endl;
 
-	system("pause");
 	return 0;
 }
