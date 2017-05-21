@@ -48,26 +48,12 @@ CMR Vtu_xml_importer::Import(const string &absolute_file_path)
 		if (name == "types") fillTypeVector(data_array->value());
 	}
 
-	fillMesh(&vtuCMR);
-	
+	fillMesh(vtuCMR);
+
 	return vtuCMR;
 }
 
-void Vtu_xml_importer::setConnectiivities(CMR *vtuCMR)
-{
-	vector<int>::iterator connIt = connectivities.begin();
-	for (auto type : types)
-	{
-		switch (type)
-		{
-		case 10:
-			vtuCMR->elementsT4.push_back({ *connIt++, *connIt++ ,*connIt++ ,*connIt++ });
-			break;
-		}
-	}
-}
-
-void Vtu_xml_importer::fillConnectivitiesVector(string data)
+void Vtu_xml_importer::fillConnectivitiesVector(const string& data)
 {
 	double t;
 	stringstream connectivitiesStream(data);
@@ -88,15 +74,16 @@ void Vtu_xml_importer::fillTypeVector(string data)
 	}
 }
 
-void Vtu_xml_importer::fillMesh(CMR *vtuCMR)
+void Vtu_xml_importer::fillMesh(CMR &vtuCMR)
 {
 	vector<int>::iterator connIt = connectivities.begin();
+
 	for (auto type : types)
 	{
 		switch (type)
 		{
 		case 10:
-			vtuCMR->elementsT4.push_back({ *connIt++, *connIt++ ,*connIt++ ,*connIt++ });
+			vtuCMR.elementsT4.push_back({ *connIt++, *connIt++ ,*connIt++ ,*connIt++ });
 			break;
 		}
 	}

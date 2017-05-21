@@ -17,16 +17,16 @@ class Vtu_xml_importer : public MeshImporter {
 
 	public: 
 
-		CMR Import(const string & absolute_file_path) override;
+		CMR Import(const string & absolute_file_path);
 		
 	private:
 		vector<int> types;
 		vector<int> connectivities;
 
-		void setConnectiivities(CMR *VtuCMR);
-		void fillConnectivitiesVector(string data);
+		void setConnectiivities(CMR &vtuCMR);
+		void fillConnectivitiesVector(const string& data);
 		void fillTypeVector(string data);
-		void fillMesh(CMR *vtuCMR);
+		void fillMesh(CMR &vtuCMR);
 };
 
 
