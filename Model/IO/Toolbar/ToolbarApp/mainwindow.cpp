@@ -20,6 +20,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionGMsh_triggered()
 {
     MeshExport exportGMsh;
-    exportGMsh.Export("test_export.msh", c);
+    exportGMsh.Export("C:\test_export.msh", c);
     ui->label->setText("Finished export to .msh format");
 }
