@@ -25,6 +25,8 @@ public:
 private slots:
     void on_actionGMsh_triggered();
 
+    void on_actionGMsh_2_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

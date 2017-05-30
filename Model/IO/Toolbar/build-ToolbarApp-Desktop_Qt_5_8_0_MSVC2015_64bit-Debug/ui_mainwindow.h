@@ -28,6 +28,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionGMsh;
+    QAction *actionGMsh_2;
     QWidget *centralWidget;
     QLabel *label;
     QMenuBar *menuBar;
@@ -43,6 +44,8 @@ public:
         MainWindow->resize(256, 102);
         actionGMsh = new QAction(MainWindow);
         actionGMsh->setObjectName(QStringLiteral("actionGMsh"));
+        actionGMsh_2 = new QAction(MainWindow);
+        actionGMsh_2->setObjectName(QStringLiteral("actionGMsh_2"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
@@ -66,6 +69,7 @@ public:
 
         menuBar->addAction(menuImport->menuAction());
         menuBar->addAction(menuExport->menuAction());
+        menuImport->addAction(actionGMsh_2);
         menuExport->addAction(actionGMsh);
 
         retranslateUi(MainWindow);
@@ -77,6 +81,7 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         actionGMsh->setText(QApplication::translate("MainWindow", "GMsh", Q_NULLPTR));
+        actionGMsh_2->setText(QApplication::translate("MainWindow", "GMsh", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Ready", Q_NULLPTR));
         menuImport->setTitle(QApplication::translate("MainWindow", "Import", Q_NULLPTR));
         menuExport->setTitle(QApplication::translate("MainWindow", "Export", Q_NULLPTR));

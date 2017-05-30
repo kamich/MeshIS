@@ -1,7 +1,7 @@
 #pragma 
 #ifndef MESHIS_GMSH_IMPORTER_H_
 #define MESHIS_GMSH_IMPORTER_H_
-#include "MeshImporter.h"
+#include "../MeshImporter.h"
 
 namespace MeshIS
 {
