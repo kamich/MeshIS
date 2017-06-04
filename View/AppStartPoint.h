@@ -10,7 +10,14 @@ class AppStartPoint
 public:
     static void render();
     static void reshape(int width, int height);
+
     void setFunctionsToRender(vector<function<void()>> const &);
+
+    static enum MENU_TYPE
+    {
+        SAVE_STATE,
+        LOAD_STATE
+    };
 
 private:
     static void cleanWindow();

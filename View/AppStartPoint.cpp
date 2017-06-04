@@ -1,6 +1,7 @@
 #include "ViewInitializer.h"
 #include "StatisticsDisplayer.h"
 #include "AppStartPoint.h"
+#include "../Model/IO/State/StateManager.h"
 #include <string>
 #include <iostream>
 #include <GL/glut.h>
@@ -52,29 +53,4 @@ void AppStartPoint::reshape(int width, int height)
 void AppStartPoint::setFunctionsToRender(vector<function<void()>> const & fun)
 {
 	renderFunctions = fun;
-}
-
-int main(int argc, char* argv[])
-{
-	AppStartPoint app;
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH);
-	glutInitWindowSize(800, 600);
-	glutCreateWindow("MeshIS");
-
-	glutDisplayFunc(AppStartPoint::render);
-	glutReshapeFunc(AppStartPoint::reshape);
-
-	CMR mesh;
-
-	MeshIS::Model::MeshStatistics meshStats(mesh);
-    meshStats.processT3Elements();
-	StatisticsDisplayer stats(meshStats);
-	ViewInitializer view;
-
-	view.addFunction(std::bind(&StatisticsDisplayer::displayStatistics, stats));
-	app.setFunctionsToRender(view.getFunctionsToRender());
-
-	glutMainLoop();
-	return 0;
 }

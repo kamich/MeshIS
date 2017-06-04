@@ -59,6 +59,9 @@ set(Sources
         Model/Common/CommonMeshRepresentation.h
         Model/Mesh_Statistics/MeshStatistics.cpp
         Model/Mesh_Statistics/MeshStatistics.h
+        Model/IO/State/StateManager.h
+        Model/IO/State/StateManager.cpp
+        View/main.cpp
         )
 add_executable(Mesh ${Sources})
 
