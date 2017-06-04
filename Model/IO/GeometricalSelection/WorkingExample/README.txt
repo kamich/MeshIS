@@ -1,0 +1,1 @@
+You can change selection type by pressing S for rectangle shape (Square'ish) or C for Circle selection.
