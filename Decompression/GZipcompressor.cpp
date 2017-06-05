@@ -1,59 +1,39 @@
-
 #include "GZipCompressor.h"
 #include <sstream>
 
-GZipCompressor::GZipCompressor()
+CMR GZipCompressor::Import(const string& absolute_file_path) 
 {
-}
-
-CMR OB;
-
-CMR GZipCompressor::Import(const string& absolute_file_path)
-{
-	ifstream file(absolute_file_path, ios_base::in | ios_base::binary);
-	boost::iostreams::filtering_streambuf<boost::iostreams::input> in;
-	in.push(boost::iostreams::gzip_decompressor());
-	in.push(file);
-	std::istream inf(&in);
+	CMR OB;
+	std::ifstream file(absolute_file_path, std::ios_base::in | std::ios_base::binary);  // file to decompresion 
+	boost::iostreams::filtering_streambuf<boost::iostreams::input> in;// functions from boost toutorial for compression/decompression
+	in.push(boost::iostreams::gzip_decompressor());					  //...
+	in.push(file);													  //...
+	std::istream inf(&in);											  //...
 
 	if (inf.good()) {
 		char tmpbuf[8192];
-		ofstream file2("dane2.txt", ios_base::out | ios_base::binary);
+		std::ofstream file2("dane2.txt", std::ios_base::out | std::ios_base::binary); // file for decompressed text
 
-		inf.read(tmpbuf, sizeof(tmpbuf));
+		inf.read(tmpbuf, sizeof(tmpbuf));												// decompressed file is saving to tmpbuf
 		int i = 0;
-		while (tmpbuf[i] != 'Ì'){
+		while (tmpbuf[i] != 'Ì'){ // after decompression empty cells of tmpbuf are filled with a sign "Ì" 
+								  // I made mechanism to remove all "Ì" (is not really advanced...)
+								  // text after decompression for example:
 
-			file2 << tmpbuf[i];
-		i++;
-	}
-		
-	}
-	
+				//Litwo!Ojczyzno moja!ty jesteœ jak zdrowie.
 
+				//Ile ciê trzeba ceniæ, ten tylko siê dowie,
+
+				//Kto ciê straci³.Dziœ piêknoœæ tw¹ w ca³ej ozdobie
+
+				//Widzê i opisujê, bo têskniê po tobie.ÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌ...
+			
+			file2 << tmpbuf[i]; //tmpbud to file2 "dane.txt
+			i++;
+
+			// I'm sorry for my english
+		}	
+	}
 	return OB;
 }
 
-//int GZipCompressor::read_file(std::string& buf, const char *fn)
-//{
-//	ifstream file(fn, ios_base::in | ios_base::binary);
-//	boost::iostreams::filtering_streambuf<boost::iostreams::input> in;
-//	in.push(boost::iostreams::gzip_decompressor());
-//	in.push(file);
-//
-//	std::istream inf(&in);
-//
-//	while (inf.good()) {
-//		char tmpbuf[8192];
-//
-//		inf.read(tmpbuf, sizeof(tmpbuf));
-//		buf.append(tmpbuf, inf.gcount());
-//	}
-//
-//	return 0;
-//}
-
-
-GZipCompressor::~GZipCompressor()
-{
-}
