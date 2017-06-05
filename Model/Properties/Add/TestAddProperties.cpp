@@ -26,6 +26,10 @@ int main() {
 	checkValue(CMR, id3, value3, Type::SPECIFIC_HEAT);
 	checkValue(CMR, id4, value4, Type::TRANSFER_COEFFICIENT);
 
+	//OVERRIDE 
+	Manager.addConductivity(CMR, id1, value2);
+	checkValue(CMR, id1, value2, Type::CONDUCTIVITY);
+	
 	//CHECK IF NOT PASS
 	checkValue(CMR, id1, value4, Type::TRANSFER_COEFFICIENT);
 
