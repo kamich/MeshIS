@@ -29,9 +29,10 @@ int main() {
 	//OVERRIDE 
 	Manager.addConductivity(CMR, id1, value2);
 	checkValue(CMR, id1, value2, Type::CONDUCTIVITY);
-	
+
 	//CHECK IF NOT PASS
 	checkValue(CMR, id1, value4, Type::TRANSFER_COEFFICIENT);
+	checkValue(CMR, id1, value1, Type::CONDUCTIVITY);
 
 	system("PAUSE");
 
@@ -44,7 +45,7 @@ void checkValue( CMR& cmr,  ElementID id, PropertyValue toCheck, Type type) {
 	case CONDUCTIVITY:
 		if (cmr.conductivity.find(id) != cmr.conductivity.end())
 		{
-			if (!toCheck == cmr.conductivity.find(id)->second)
+			if (!(toCheck == cmr.conductivity.find(id)->second))
 				std::cerr << "Incorrect PROPERTY VALUE in CONDUCTIVITY" << std::endl;
 		}
 		else
@@ -53,7 +54,7 @@ void checkValue( CMR& cmr,  ElementID id, PropertyValue toCheck, Type type) {
 	case DENSITY:
 		if (cmr.density.find(id) != cmr.density.end())
 		{
-			if (!toCheck == cmr.density.find(id)->second)
+			if (!(toCheck == cmr.density.find(id)->second))
 				std::cerr << "Incorrect PROPERTY VALUE in DENSITY" << std::endl;
 		}
 		else
@@ -62,7 +63,7 @@ void checkValue( CMR& cmr,  ElementID id, PropertyValue toCheck, Type type) {
 	case SPECIFIC_HEAT:
 		if (cmr.specificHeat.find(id) != cmr.specificHeat.end())
 		{
-			if (!toCheck == cmr.specificHeat.find(id)->second)
+			if (!(toCheck == cmr.specificHeat.find(id)->second))
 				std::cerr << "Incorrect PROPERTY VALUE in SPECIFIC HEAT" << std::endl;
 		}
 		else
@@ -71,7 +72,7 @@ void checkValue( CMR& cmr,  ElementID id, PropertyValue toCheck, Type type) {
 	case TRANSFER_COEFFICIENT:
 		if (cmr.heatTransferCoefficient.find(id) != cmr.heatTransferCoefficient.end())
 		{
-			if (!toCheck == cmr.heatTransferCoefficient.find(id)->second)
+			if (!(toCheck == cmr.heatTransferCoefficient.find(id)->second))
 				std::cerr << "Incorrect PROPERTY VALUE in TRANSFER COEFFICIENT" << std::endl;
 		}
 		else
