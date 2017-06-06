@@ -1,4 +1,4 @@
-#pragma 
+#pragma once
 #ifndef MESHIS_COMMON_MESH_REPRESENTATION_H_
 #define MESHIS_COMMON_MESH_REPRESENTATION_H_
 
@@ -11,9 +11,11 @@
 
 #include <vector>
 #include <array>
+#include <map>
 
 using std::vector;
 using std::array;
+using std::map;
 
 namespace MeshIS
 {
@@ -25,14 +27,15 @@ namespace MeshIS
 			// no need for such simple class.
 			typedef array<double, 3> Vertex;
 			typedef int             VertexID;
-
+	
 			typedef int               ElementID;
-
+			typedef double			 PropertyValue;
 			// Element is defined as 4 vertices:
 			// no need for such simple class either.
 			typedef array<VertexID, 4> Element_T4;	//< Tetrahedral element with 4 vertices.
 			typedef array<VertexID, 3> Element_T3;	//< Triangular element with 3 vertices.
 			typedef array<VertexID, 6> Element_P6;	//< Prismatic elements with 6 vertices.
+			typedef map<ElementID, PropertyValue> Property; 
 
 			class CommonMeshRepresentation
 			{
@@ -44,6 +47,11 @@ namespace MeshIS
 				vector<Element_T4>     elementsT4;
 				vector<Element_T3>		elementsT3;
 				vector<Element_P6>     elementsP6;
+
+				Property specificHeat;
+				Property conductivity;
+				Property density;
+				Property heatTransferCoefficient;
 			};
 
 			typedef CommonMeshRepresentation CMR; //< Just for convenience, to avoid typing this long name.
