@@ -1,12 +1,15 @@
 #include "Renderer.h"
-#include "CommonMeshRepresentation.h"
+#include "../../Model/Common/CommonMeshRepresentation.h"
+
 extern GLFWwindow* window;
 
 
 int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 {
-	int verticesArraySize = common_mesh.vertices.size()*3;
-	const float* arr = commonToArray(common_mesh).data();
+	
+	vector<float> glData = commonToArray(common_mesh);
+	int verticesArraySize = glData.size();
+	const float* arr = glData.data();
 
 	if (!glfwInit())
 	{
@@ -61,7 +64,8 @@ int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 
 	glColor3f(1, 1, 1);
-	glPointSize(1.0);
+	glPointSize(10.0);
+	glLineWidth(25.0);
 
 
 	GLuint vertexbuffer;
@@ -85,8 +89,9 @@ int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 		glEnableVertexAttribArray(0);
 		glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-		glDrawArrays(GL_POINTS, 0, verticesArraySize);
-
+		//GLenum mode = GL_TRIANGLES;
+		GLenum mode = GL_LINES;
+		glDrawArrays(mode, 0, verticesArraySize);
 		glDisableVertexAttribArray(0);
 
 		glfwSwapBuffers(window);
@@ -102,19 +107,16 @@ int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 	return 0;
 }
 
+
 vector<float> Renderer::commonToArray(CommonMeshRepresentation data)
 {
 	vector < float > array;
-	array.resize(data.vertices.size() * 3);
-	int i = 0;
 	for (Vertex vertex : data.vertices)
 	{
-		array[i]=(vertex[0]);
-		i++;
-		array[i]=(vertex[1]);
-		i++;
-		array[i]=(vertex[2]);
-		i++;
+
+		for (std::array<double, 3>::iterator it = vertex.begin(); it != vertex.end(); ++it) {
+			array.push_back(*it);
+		}
 	}
 	return array;
 }

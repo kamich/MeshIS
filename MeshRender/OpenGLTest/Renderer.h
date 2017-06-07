@@ -6,13 +6,9 @@
 
 #include <GLFW/glfw3.h>
 
-#include <CommonMeshRepresentation.h>
+#include "../../Model/Common/CommonMeshRepresentation.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-using namespace glm;
-using namespace MeshIS;
-using namespace Model;
-using namespace Common;
 
 #include "shader.hpp"
 #include "texture.hpp"
@@ -23,6 +19,7 @@ using namespace glm;
 using namespace MeshIS;
 using namespace Model;
 using namespace Common;
+using namespace std;
 
 class Renderer
 {

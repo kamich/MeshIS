@@ -4,7 +4,7 @@
 #include <vector>
 #include "GL/glew.h"
 
-#include <CommonMeshRepresentation.h>
+#include "../../Model/Common/CommonMeshRepresentation.h"
 class VertexLoader
 {
 public:
