@@ -110,14 +110,35 @@ int Renderer::loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh)
 
 vector<float> Renderer::commonToArray(CommonMeshRepresentation data)
 {
-	vector < float > array;
-	for (Vertex vertex : data.vertices)
-	{
-
-		for (std::array<double, 3>::iterator it = vertex.begin(); it != vertex.end(); ++it) {
-			array.push_back(*it);
-		}
+	vector < float > glData;
+	//tetrahedrals
+	for (Element_T4 element : data.elementsT4) {
+		addElementToGlData(glData, element, data);
 	}
-	return array;
+	//prisms
+	for (Element_P6 element : data.elementsP6) {
+		addElementToGlData(glData, element, data);
+	}
+	return glData;
 }
 
+template<typename Element>
+void Renderer::addElementToGlData(vector<float> & glData, Element element, CommonMeshRepresentation data) {
+	for (int i = 0; i < element.size(); i++) {
+		for (int j = 0; j <element.size(); j++) {
+			//connect each vertex
+			if (j != i) {
+				Vertex vertex = data.vertices.at(element.at(i));
+				pushVertexToGlData(glData, vertex);
+				vertex = data.vertices.at(element.at(j));
+				pushVertexToGlData(glData, vertex);
+			}
+		}
+	}
+}
+
+void Renderer::pushVertexToGlData(vector<float> & glData, Vertex vertex) {
+	for (std::array<double, 3>::iterator vertexIt = vertex.begin(); vertexIt != vertex.end(); ++vertexIt) {
+		glData.push_back(*vertexIt);
+	}
+}

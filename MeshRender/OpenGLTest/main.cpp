@@ -5,58 +5,43 @@
 GLFWwindow* window;
 
 
+MeshIS::Model::Common::CommonMeshRepresentation makePrism() {
+	MeshIS::Model::Common::CommonMeshRepresentation commonMesh;
+
+	//przykladowe dane; prism
+	commonMesh.vertices.push_back(Vertex{ 0.,0.,0. });
+	commonMesh.vertices.push_back(Vertex{ 2.,0.,0. });
+	commonMesh.vertices.push_back(Vertex{ 1.,2,0. });
+	commonMesh.vertices.push_back(Vertex{ 0.,0.,2. });
+	commonMesh.vertices.push_back(Vertex{ 2.,0.,2. });
+	commonMesh.vertices.push_back(Vertex{ 1.,2,2. });
+
+	commonMesh.elementsP6.push_back(Element_P6{ 0,1,2,3,4,5 });
+	
+	return commonMesh;
+}
+
+MeshIS::Model::Common::CommonMeshRepresentation makeTetrahedral() {
+	MeshIS::Model::Common::CommonMeshRepresentation commonMesh;
+
+	//przykladowe dane; tetrahedral
+	commonMesh.vertices.push_back(Vertex{ 0.,0.,0. });
+	commonMesh.vertices.push_back(Vertex{ 1.,0.,1. });
+	commonMesh.vertices.push_back(Vertex{ -1.,0.,1. });
+	commonMesh.vertices.push_back(Vertex{ 0.,1.,1. });
+
+	commonMesh.elementsT4.push_back(Element_T4{ 0,1,2,3 });
+	return commonMesh;
+}
+
 int main(void)
 {
 	Renderer* renderer = new Renderer();
-	MeshIS::Model::Common::CommonMeshRepresentation commonMesh;
-	array<Vertex, 2> vertexes;
-	vector<array<Vertex,2>> elements2D;
-	//przykladowe dane; szescian
-	
-	vertexes[0] = { 0.,0.,0. };
-	vertexes[1] = { 0.,1.,0. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 0.,1.,0. };
-	vertexes[1] = { 1.,1.,0. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,1.,0. };
-	vertexes[1] = { 1.,0.,0. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,0.,0. };
-	vertexes[1] = { 0.,0.,0. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 0.,0.,0. };
-	vertexes[1] = { 0.,0.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,0.,0. };
-	vertexes[1] = { 1.,0.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 0.,1.,0. };
-	vertexes[1] = { 0.,1.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,1.,0. };
-	vertexes[1] = { 1.,1.,1. };
-	elements2D.push_back(vertexes);
 
-	vertexes[0] = { 0.,1.,1. };
-	vertexes[1] = { 1.,1.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,1.,1. };
-	vertexes[1] = { 1.,0.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 1.,0.,1. };
-	vertexes[1] = { 0.,0.,1. };
-	elements2D.push_back(vertexes);
-	vertexes[0] = { 0.,0.,1. };
-	vertexes[1] = { 0.,1.,1. };
-	elements2D.push_back(vertexes);
+	//do wyboru do koloru
+	//MeshIS::Model::Common::CommonMeshRepresentation commonMesh = makePrism();
+	MeshIS::Model::Common::CommonMeshRepresentation commonMesh = makeTetrahedral();
 
-
-	for (vector<array<Vertex, 2>>::iterator it = elements2D.begin(); it != elements2D.end(); ++it) {
-		commonMesh.vertices.push_back((*it)[0]);
-		commonMesh.vertices.push_back((*it)[1]);
-	}
-	
 	renderer->loop(commonMesh);
 	return 0;
 }

@@ -30,5 +30,8 @@ public:
 	int loop(MeshIS::Model::Common::CommonMeshRepresentation common_mesh);
 private:
 	vector<float> commonToArray(MeshIS::Model::Common::CommonMeshRepresentation data);
+	template<typename Element>
+	void addElementToGlData(vector<float>& glData, Element element, CommonMeshRepresentation data);
+	void pushVertexToGlData(vector<float>& glData, Vertex vertex);
 };
 
