@@ -27,3 +27,6 @@
 *.exe
 *.out
 *.app
+.vs
+/InvertSelection/*.json
+/Model/IO/Import/GMsh/*.json
