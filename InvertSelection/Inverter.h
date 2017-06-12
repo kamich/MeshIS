@@ -12,6 +12,8 @@ public:
 	CMR invert(CMR& all, CMR& selected);
 
 private:
+	static const int notSelected = -1;
+
 	template<class T>
 	void invertPart(T& selected, T& unselected);
 	

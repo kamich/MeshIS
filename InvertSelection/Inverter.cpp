@@ -30,7 +30,7 @@ void Inverter::invertPart(T& selected, T& unselected)
 				{
 					for (int j = 0; j < unselected[i].size(); j++)
 					{
-						unselected[i].at(j) = -1;
+						unselected[i].at(j) = notSelected;
 					}
 				}
 			}
