@@ -17,6 +17,12 @@ namespace MeshIS
 					void addConductivity(CMR&, ElementID, PropertyValue);
 					void addDensity(CMR&, ElementID, PropertyValue);
 					void addTransferCoefficient(CMR&, ElementID, PropertyValue);
+					
+					void removeSpecificHeat(CMR&, ElementID);
+					void removeConductivity(CMR&, ElementID);
+					void removeDensity(CMR&, ElementID);
+					void removeTransferCoefficient(CMR&, ElementID);
+
 				};
 		}
 	}
