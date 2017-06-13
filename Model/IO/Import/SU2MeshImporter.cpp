@@ -17,14 +17,14 @@ namespace MeshIS
 			Common::CMR SU2LImporter::Import(const string & absolute_file_path)
 			{
 				std::fstream su2file;
-				su2file.open(absolute_file_path, std::ios::in);
-				if (!su2file.good())
-				{
+				try {
+					su2file.open(absolute_file_path, std::ios::in);
+				}
+				cath(exception& e) {
 					std::cout << "Can't open the file. You have problem !" << std::endl;
 					std::cin.get();
 					return cmr;
 				}
-
 				std::string line;
 				while (!su2file.eof())
 				{
