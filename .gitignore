@@ -4,6 +4,10 @@
 *.o
 *.obj
 
+# Projects
+*.pro
+*.user
+
 # Precompiled Headers
 *.gch
 *.pch
