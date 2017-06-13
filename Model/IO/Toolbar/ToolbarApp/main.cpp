@@ -7,6 +7,7 @@ void loadExampleData();
 
 int main(int argc, char *argv[])
 {
+    loadExampleData();
     QApplication app(argc, argv);
     MainWindow toolbar(cmr);
     toolbar.show();

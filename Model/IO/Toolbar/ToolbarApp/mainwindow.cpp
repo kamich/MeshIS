@@ -26,8 +26,8 @@ void MainWindow::on_actionGMsh_triggered()
 }
 
 void MainWindow::on_actionGMsh_2_triggered()
-{   // import GMsh
-    Abaqus_Importer importGMsh;
-    importGMsh.Import("../../../../TestData/MeshFiles/Abaqus/test1_fluent.inp");
-    ui->label->setText("Finished import from .msh file");
+{   // import Abaqus
+    Abaqus_Importer importAbaqus;
+    importAbaqus.Import("../../../../TestData/MeshFiles/Abaqus/test1_fluent.inp");
+    ui->label->setText("Finished import from .inp file");
 }
