@@ -9,10 +9,10 @@
 #define CPPWINLIN_PLUGIN_MANAGER_H
 
 /*
-* This is the factory, the common interface to "plugins".
+* This is the abstract factory, the common interface to "plugins".
 * Plugins registers themselves here and the factory can serve them on
-* demand.
-* It is a Singleton
+* demand. The class action is parallel.
+* It is a Singleton and Abstract Factory
 */
 namespace MeshIS
 {
@@ -20,6 +20,8 @@ namespace MeshIS
 	{
 
 		using vector_of_futures = std::vector<std::future<void>>;
+		using map_of_plugins = std::map<std::string, std::shared_ptr<I_Plugin_Register>>;
+		
 
 		class Plugin_Manager {
 		public:
@@ -29,9 +31,7 @@ namespace MeshIS
 			/* Register a new plugin */
 			void register_plugin(I_Plugin_Register * reg_plugin, std::string &&name) noexcept;
 
-			/* Get an instance of a plugin based on its name */
-			/* throws out_of_range if plugin not found */
-			std::shared_ptr<I_Plugin> get_plugin(std::string &&name);
+			plugin_shared_ptr get_plugin(std::string &&name);
 
 			void run_plugin(std::string &&name);
 			int run_all_plugins() noexcept;
@@ -52,12 +52,12 @@ namespace MeshIS
 				std::decay_t<T>
 				>::value
 				>
-				, typename... Types>
+			, typename... Types>
 				void run_selected_plugins(const T& first_plugin, const Types&... plugins);
 
 		private:
 			/* Holds pointers to plugin registers */
-			std::map<std::string, std::shared_ptr<I_Plugin_Register>> m_registry;
+			map_of_plugins m_registry;
 			/* Make constructors private and forbid cloning */
 			Plugin_Manager() : m_registry() {};
 

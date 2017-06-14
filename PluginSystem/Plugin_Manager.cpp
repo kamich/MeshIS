@@ -4,20 +4,22 @@ namespace MeshIS
 {
 	namespace Plugin_System {
 
+		using plugin_reg_shared_ptr = std::shared_ptr<I_Plugin_Register>;
+		
 		Plugin_Manager& Plugin_Manager::get_instance() noexcept {
 			static Plugin_Manager s_instance;
 			return s_instance;
 		}
 
 		void Plugin_Manager::register_plugin(I_Plugin_Register * reg, std::string &&name) noexcept {
-			m_registry[name] = std::shared_ptr<I_Plugin_Register>(reg);
+			m_registry[name] = plugin_reg_shared_ptr(reg);
 		}
 
-		std::shared_ptr<I_Plugin> Plugin_Manager::get_plugin(std::string &&name) {
+		plugin_shared_ptr Plugin_Manager::get_plugin(std::string &&name) {
 
 			check_plugin_exist(std::move(name));
 
-			std::shared_ptr<I_Plugin_Register> reg;
+			plugin_reg_shared_ptr reg;
 			reg = m_registry[name];
 			return reg->get_plugin();
 
@@ -27,7 +29,7 @@ namespace MeshIS
 		{
 			check_plugin_exist(std::move(name));
 
-			std::shared_ptr<I_Plugin_Register> reg;
+			plugin_reg_shared_ptr reg;
 			reg = m_registry[name];
 			auto plugin = reg->get_plugin();
 			plugin->action();

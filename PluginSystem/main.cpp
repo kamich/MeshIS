@@ -5,9 +5,9 @@ int main()
 {
 	Plugin_Manager &factory = Plugin_Manager::get_instance();
 
-	std::shared_ptr<I_Plugin> plugin1;
-	std::shared_ptr<I_Plugin> plugin2;
-	std::shared_ptr<I_Plugin> plugin3;
+	plugin_shared_ptr plugin1;
+	plugin_shared_ptr plugin2;
+	plugin_shared_ptr plugin3;
 
 	try {
 		plugin2 = factory.get_plugin("Plugin22"); 
@@ -35,5 +35,4 @@ int main()
 	factory.run_selected_plugins("Plugin1", "Plugin2", "Plugin1");
 	
 	return 0;
-
 }

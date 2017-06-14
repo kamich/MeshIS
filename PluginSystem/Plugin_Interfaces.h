@@ -7,19 +7,23 @@
 namespace MeshIS
 {
 	namespace Plugin_System {
-		/* Base class for plugins */
+
+		class I_Plugin;
+		using plugin_shared_ptr = std::shared_ptr<I_Plugin>;
+
+		/* Interface for plugins */
 		class I_Plugin {
 		public:
 			virtual void action() = 0;
 		};
 
 		/*
-		* Base class for Plugin_Register
+		* Interface for Plugin_Register
 		* See Plugin_Register below for explanations
 		*/
 		class I_Plugin_Register {
 		public:
-			virtual std::shared_ptr<I_Plugin> get_plugin() = 0;
+			virtual plugin_shared_ptr get_plugin() = 0;
 		};
 
 	}
