@@ -22,13 +22,8 @@ private:
     void writeToFile(const string &absolute_file_path, const CMR &mesh_data);
     void printElements(std::fstream & file, const CMR &mesh_data);
     void printVertexes(std::fstream &file, const CMR &mesh_data);
-    void printInformation(std::fstream & file,vector<std::string> information);
-    void printElementHeader(std::fstream & file,std::string elementType);
     void printEdges(std::fstream &file, const CMR &mesh_data);
     void printFaces(std::fstream &file, const CMR &mesh_data);
-    void printSingleElementType(std::fstream &file,const CMR &mesh_data, std::string elemntType);
-
-    void printSets(std::fstream &file, const CMR &mesh_data);
 
 };
 
