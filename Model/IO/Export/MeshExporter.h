@@ -1,4 +1,3 @@
-#pragma 
 #ifndef MESHIS_MESH_EXPORTER_H_
 #define MESHIS_MESH_EXPORTER_H_
 
