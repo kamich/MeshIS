@@ -1,19 +1,39 @@
 #include <iostream>
 #include "Plugin_Manager.h"
-
+using namespace MeshIS::Plugin_System;
 int main()
 {
-	plugin_system::Plugin_Manager &factory = plugin_system::Plugin_Manager::instance();
+	Plugin_Manager &factory = Plugin_Manager::get_instance();
 
-	plugin_system::I_Plugin* plugin1;
-	plugin_system::I_Plugin* plugin2;
+	std::shared_ptr<I_Plugin> plugin1;
+	std::shared_ptr<I_Plugin> plugin2;
+	std::shared_ptr<I_Plugin> plugin3;
 
-	plugin2 = factory.get_plugin("Plugin2"); /* should try-catch that */
-	plugin2->action();
-
+	try {
+		plugin2 = factory.get_plugin("Plugin22"); 
+		plugin2->action();
+	}
+	catch (const Plugin_Exception& e)
+	{
+		std::cout<<e.what();
+	}
+	
+	try {
 	plugin1 = factory.get_plugin("Plugin1");
 	plugin1->action();
+	}
+	catch (const Plugin_Exception& e)
+	{
+		std::cout << e.what();
+	}
+	
+	factory.run_plugin("Plugin1");
 
-	system("pause");
+	std::cout << "Number of plugins:" << factory.run_all_plugins() << std::endl;
+
+	std::cout << "Varaidic Plugins" << std::endl;
+	factory.run_selected_plugins("Plugin1", "Plugin2", "Plugin1");
+	
 	return 0;
+
 }

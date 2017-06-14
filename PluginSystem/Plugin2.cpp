@@ -6,14 +6,13 @@
 #include <iostream>
 #include"Plugin_Manager.h"
 #include"Plugin_Register.h"
-
 namespace MeshIS
 {
-	class Plugin1 : public Plugin_System::I_Plugin {
+	class Plugin2 : public Plugin_System::I_Plugin {
 		void action() override {
-			std::cout << "Plugin1" << std::endl;
+			std::cout << "Plugin2 hehe" << std::endl;
 		}
 	};
 
-	REGISTER_PLUGIN(Plugin1)
+	REGISTER_PLUGIN(Plugin2)
 }

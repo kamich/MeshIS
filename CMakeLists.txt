@@ -38,6 +38,10 @@ SET (${this_target}_SOURCE_FILES
 	MeshIS/Model/IO/Export/MeshExporter.cpp
 	MeshIS/Model/IO/Export/Nastran/NastranExporter/NastranExporter.cpp
 	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppShortBulkData.cpp
+	MeshIS/PluginSystem/main.cpp
+	MeshIS/PluginSystem/Plugin_Manager.cpp
+	MeshIS/PluginSystem/Plugin1.cpp
+	MeshIS/PluginSystem/Plugin2.cpp
     )
 
 ## section: header files
@@ -48,6 +52,10 @@ SET(${this_target}_HEADER_FILES
 	MeshIS/Model/IO/Export/MeshExporter.h
 	MeshIS/Model/IO/Export/Nastran/NastranExporter/NastranExporter.h
 	MeshIS/Model/IO/Export/Nastran/BulkData/BulkData.cppShortBulkData.h
+	MeshIS/PluginSystem/Plugin_Exception.h
+	MeshIS/PluginSystem/Plugin_Interfaces.h
+	MeshIS/PluginSystem/Plugin_Manager.h
+	MeshIS/PluginSystem/Plugin_Register.h
     )
 
 SOURCE_GROUP("Source Files" FILES 
