@@ -22,7 +22,7 @@ void MeshExport::Export(const string& absolute_file_path, const CMR & mesh_data)
 		int elementId = 1;
 		int typElementu = 44  //Plane Stress Linear Quadrilateral
 			int numberOfNodesInElement = 4;
-		for (auto element = cmr.elementsT4.begin(); element != cmr.elementsT4.end(); +element)
+		for (auto element = cmr.elementsT4.begin(); element != cmr.elementsT4.end(); ++element)
 		{
 			string record1 = "\t " + elementId + "\t" + typElementu + "\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + numberOfNodesInElement;
 
@@ -42,7 +42,7 @@ void MeshExport::Export(const string& absolute_file_path, const CMR & mesh_data)
 		int elementId = 1;
 		int typElementu = 74  // Membrane Linear Triangle
 			int numberOfNodesInElement = 3;
-		for (auto element = cmr.elementsT3.begin(); element != cmr.elementsT3.end(); +element)
+		for (auto element = cmr.elementsT3.begin(); element != cmr.elementsT3.end(); ++element)
 		{
 			string record1 = "\t " + elementId + "\t" + typElementu + "\t" + 0 + "\t" + 0 + "\t" + 0 + "\t" + numberOfNodesInElement;
 
