@@ -3,7 +3,7 @@
 #include <string>
 #include "../MeshExporter.h"
 #include "../../../Common/CommonMeshRepresentation.h"
-using namespace std; 
+ 
 
 using MeshIS::Model::Common::CMR;
 using MeshIS::Model::Common::Element_T3;
@@ -33,8 +33,9 @@ void MeshExport::Export(const string& absolute_file_path, const CMR & mesh_data)
 				record2 += "\t"
 			}
 			file.writeline(record1);
+			file << std::endl;
 			file.writeline(record2)
-
+				file << std::endl;
 				elementId++;
 		}
 
@@ -53,9 +54,10 @@ void MeshExport::Export(const string& absolute_file_path, const CMR & mesh_data)
 				record2 += "\t"
 			}
 			file.writeline(record1);
+			file << std::endl;
 			file.writeline(record2)
-
-				elementId++;
+				file << std::endl;
+			elementId++;
 		}
 
 		
